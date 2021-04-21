@@ -1,0 +1,230 @@
+body
+{
+background-color:#fff2f2;
+font-family:arial,sans-serif; 
+padding:0;
+margin:0;
+}
+
+.questionEcho
+{
+margin-left:2em;
+}
+
+p.revisions
+{
+font-size:0.66em;
+margin:0.5em 1.5em;
+padding:0em;
+}
+
+.answer
+{
+background-color:#f0f0ff;
+border-style:groove;
+border-width:thin;
+padding:1em;
+margin:1em;
+}
+
+.answer h3
+{
+color:blue;
+}
+
+.lesson
+{
+margin-top:1.5em;
+margin-right:1.5em;
+margin-bottom:1.5em;
+margin-left:1.5em;
+padding:0em;
+}
+
+.lesson p
+{
+text-align: justify;
+}
+
+.lesson ul
+{
+margin-left:4em;
+line-height:1.5;
+}
+
+.lesson ul ul
+{
+margin-left:2em;
+}
+
+.lesson ol
+{
+margin-left:4em;
+line-height:1.5;
+}
+
+.lesson ol ol
+{
+margin-left:2em;
+}
+
+.lesson ol ul
+{
+margin-left:2em;
+}
+
+.lesson table ul
+{
+margin-left:1.0em;
+}
+
+.lesson table ol
+{
+margin-left:1.0em;
+}
+
+.lesson h1
+{
+color:brown;
+text-align:center;
+font-size:2.0em;
+}
+
+.lesson h1 code
+{
+color:brown;
+font-size:1.4em;
+font-family:monospace; 
+}
+
+.lesson h4
+{
+color:brown;
+margin-left:3em;
+}
+
+.lesson table 
+{
+background-color: white;
+margin-left:4em;
+font-family:arial,sans-serif; 
+font-size:90%;
+}
+
+table.layout 
+{
+background-color: #fff2f2;
+margin-left:4em;
+font-family:arial,sans-serif; 
+}
+
+img.rightimage
+{
+float:right;
+margin:0em 4em 2em 2em;
+}
+
+.clearfloats
+{
+clear:both;
+}
+
+.question
+{
+background-color:#f0f0ff;
+padding:0.5em;
+border-style:groove;
+border-width:thin;
+margin:1em;
+}
+
+.question h3
+{
+color:blue;
+}
+
+.question img
+{
+border-style:none;
+}
+
+.question table  
+{
+background-color:white;
+margin-left:1em;
+font-family:arial,sans-serif; 
+font-size:90%;
+}
+
+.navigation
+{
+padding-top:1em;
+border-width:1px 0 0 0;
+border-style:dotted none none none;
+clear:both;
+}
+
+.blue
+{
+color:blue;
+}
+
+.red
+{
+color:red;
+}
+
+.green
+{
+color:green;
+}
+
+pre 
+{
+margin-left:3em;
+font-family:lucida-console,courier-new,courier,monospace; 
+}
+
+pre.code
+{
+margin-left:3em;
+font-family:lucida-console,courier-new,courier,monospace; 
+}
+
+pre.program
+{
+width:auto;
+margin-left:3em;
+margin-right:3em;
+padding:1.5em;
+border-style:double;
+border-color:brown;
+background-color:white;
+font-family:lucida-console,courier-new,courier,monospace; 
+font-size:0.90em;
+}
+
+code
+{
+font-family:lucida-console,courier-new,courier,monospace; 
+font-size:1.4em;
+color: blue;
+}
+
+table code
+{
+font-family:lucida-console,courier-new,courier,monospace; 
+font-size:1.0em;
+color: blue;
+}
+
+table pre
+{
+margin-left:0.4em;
+margin-right:0.4em;
+}
+
+a:link     { color:blue }
+a:visited  { color:brown }
+a:active   { color:red }
+a:hover    { color:red }
