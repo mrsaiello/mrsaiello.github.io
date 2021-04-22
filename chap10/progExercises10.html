@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<title>Programming Exercises</title>
+<meta name="copyright" content="2006,  Bradley Kjell">
+<meta name="author" content="Bradley Kjell kjell at ieee  dot org ">
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" type="text/css" href="../ExerciseStyle.css" />
+</head>
+
+<body>
+<hr />
+<small>created 07/30/99</small>
+<hr />
+
+<center><h1><font color=blue> 
+Chapter 10  Programming Exercises</font></h1></center>
+
+<p>
+<b>General Instructions:</b> &nbsp; Each of these programs
+calls for reading <u>integer</u> data from the keyboard.
+(Of course you will have to read in character data and
+convert it to an <em>int</em> using the wrapper class <em>Integer</em>.)
+Once you have read in an integer 
+it is OK to do double precision arithmetic with it.
+Just be sure that your arithmetic expressions don't accidentally
+call for integer math when you don't want it.
+</p>
+
+<h2>Exercise 1 --- Area of a Circle</h2>
+<p>
+Write a program that calculates the area of a circle from its radius.
+The radius will be an integer read in from the keyboard.
+The user dialog will look like this:
+<blockquote>
+<pre>
+D:\users\default>java  CircleArea
+Input the radius:
+3
+The radius is: 3 The area is: 28.274333882308138
+</pre>
+</blockquote>
+You will need to use the constant PI which you get by using Math.PI
+</p>
+<A HREF="../../cs151java.html">Click here </A> to go back to the main menu.
+<hr>
+<h2>Exercise 2 --- Cents to Dollars</h2>
+<p>
+Write a program that reads in a number of cents.
+The program will write out the number of dollars and cents,
+like this:
+<blockquote>
+<pre>
+D:\users\default>java  Dollars
+Input the cents:
+324
+That is  3 dollars and 24 cents.
+</pre>
+</blockquote>
+(For this program you will use integer arithmetic and will need to <em>avoid</em>
+floating point arithmetic.  Review the integer remainder operator % if you are
+unsure how to proceed.)
+</p>
+<A HREF="../../cs151java.html">Click here </A> to go back to the main menu.
+<hr>
+<h2>Exercise 3 --- Correct Change</h2>
+
+<p>
+When cashiers in a store give you change they try first try to "fit" dollars
+into the amount you get back,
+then try to "fit" quarters (25 cent coins) into what is left over,
+they try to "fit" dimes (10 cent coins) into  what is now left over,
+then try to "fit" nickels (5 cent coins) into what is left,
+and finally are left with a few odd cents.
+For example,
+say that your change is 163 cents:
+<UL>
+<LI>One dollar fits into 163, leaving 63 cents.
+<LI>Two quarters fit into 63 cents, leaving 13 cents.
+<LI>One dime fits into 13 cents, leaving 3 cents.
+<LI>No nickels are needed.
+<LI>Three cents are left.
+</UL>
+Your change is : 1 dollar, two quarters, one dime, and three cents.
+</p>
+
+<p>
+Write a program that reads change due to a user (in cents) and writes out
+how many dollars, quarters, dimes, nickels, and pennies she is due.
+All variables and all math in this program will be integers.
+If you are stuck, it will help to do an example problem with paper and pencil.
+</p>
+
+<form>
+<input type=button value="Comment" 
+onClick="alert('This is one of my favorite problems to give to students at this point. It is fairly simple, but has its challenges... Sometimes students write correctly working programs, but their program uses far too many statements and is not very clear. When you get your program working, look for a shorter, clearer way to do it.')">
+</form>
+
+<A HREF="../../cs151java.html">Click here </A> to go back to the main menu.
+<hr>
+<h2>Exercise 4 --- Ohm's Law</h2>
+<p>
+Ohm's law relates the <em>resistance</em> of a electrical device (like a heater)
+to the electric <em>current</em> flowing through the device
+and the <em>voltage</em> applied to it.
+The law is:
+<p>
+<blockquote>
+<pre>
+I = V/R
+</pre>
+</blockquote>
+<p>
+Here, V is the voltage (measured in volts), I is the current (measured in amps),
+and R is the resistance (measured in ohms.)
+Write a program that asks the user for the voltage and the resistance of a
+device.
+The program will then write out the current flowing through it.
+Use <em>floating point</em> math.
+</p>
+
+<p>
+Since V and R are integers (converted from user input)
+you must use a trick to do floating point division.
+Change the equation to this:
+</p>
+<blockquote>
+<pre>
+I = (V + 0.0)/R
+</pre>
+</blockquote>
+<p>
+The math inside parentheses is done first. 
+So V + 0.0 is done first, and since 0.0 is floating point, so will be the result.
+</p>
+
+</p>
+<A HREF="../../cs151java.html#10">Click here </A> to go back to the main menu.
+<hr>
