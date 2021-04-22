@@ -1,0 +1,322 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!--  INSTRUCTIONS FOR MAKING YOUR OWN FLASH CARDS:
+
+<p>
+1.  Modify this file with a text editor, such as Notepad.
+
+2.  Each card consists of a questions[] answers[] pair.
+ 
+3.  The cards are numbered from 0 to N-1.
+
+4.  For each questions[] line, enter a question between the quote marks 
+      (replacing what is already there.)  Keep everything on one line.
+
+8.  For its answers[] line, enter the answer between the quote marks 
+      (replacing what is already there.)  Keep everything on one line.
+
+9.  Delete any extra pairs you don't need, or add extra ones as needed.
+      (Use the editor's cut, copy, and paste to make this easy.)
+      Number added cards following the pattern of the first ones. 
+
+10. Change the line var numCards  = N to the number of cards you now have.
+      (Example: if you have 10 cards, they will be numbered 0 to 9 and
+      var NumCards = 10)
+
+11. Save the file.  Use a file name like "flashCards.html"  .
+
+12. Use the flash cards by clicking on the file name, or by opening them in
+    your browser.
+
+-->
+
+<html>
+<head>
+<title>Flashcards for Chapter 8</title>
+<SCRIPT LANGUAGE="JavaScript">
+
+  var numCards  = 30                        // change this to the number of cards
+  var questions = new Array(numCards)
+  var answers   = new Array(numCards)
+  var asked     = new Array(numCards)
+  var qNumber
+
+  // The flash cards start here
+  questions[0] = "How many bits are in a byte ?"
+  answers  [0] = "8 "
+
+  questions[1] = "How many bytes are in data type byte ?"
+  answers  [1] = "1 "
+
+  questions[2] = "How many bytes are in data type short ?"
+  answers  [2] = "2"
+
+  questions[3] = "How many bytes are in data type int ?"
+  answers  [3] = "4"
+
+  questions[4] = "How many bytes are in data type long ?"
+  answers  [4] = "8"
+
+  questions[5] = "How many bytes are in data type char ?"
+  answers  [5] = "2"
+
+  questions[6] = "How many bytes are in data type float ?"
+  answers  [6] = "4"
+
+  questions[7] = "How many bytes are in data type double ?"
+  answers  [7] = "8"
+
+
+  questions[8] = "What range of values can be represented in a byte ?"
+  answers  [8] = "-128 to +127"
+
+  questions[9] = "What range of values can be represented in a short ?"
+  answers  [9] = "-32,768 to +32,767 (roughly -32K to +32K)"
+
+  questions[10] = "What range of values can be represented in an int ?"
+  answers  [10] = "about -2 billion to about +2 billion "
+
+  questions[11] = "What is the type of this literal: 401.23 ?"
+  answers  [11] = "double "
+
+  questions[12] = "What is the type of this literal: 401.23F ?"
+  answers  [12] = "float "
+
+  questions[13] = "What is the type of this literal: 8072 ?"
+  answers  [13] = "int "
+
+  questions[14] = "What is the type of this literal: 8072L ?"
+  answers  [14] = "long "
+
+  questions[15] = "What is the type of this literal: 12.6E+3 ?"
+  answers  [15] = "double "
+
+  questions[16] = "What is the type of this literal: 'A' ?"
+  answers  [16] = "char (because of the single quote marks)"
+
+  questions[17] = "What is the type of this literal: \"fooled you\" ?"
+  answers  [17] = "String (not a primitive type) "
+
+  questions[18] = "What is the type of this literal: \"B\" ?"
+  answers  [18] = "String (not char, because of the double quote marks) "
+
+  questions[19] = "What is the type of this literal: 32D ?"
+  answers  [19] = "double "
+
+  questions[20] = "What are the two varieties of data in Java ?"
+  answers  [20] = "Objects and primitive data "
+
+  questions[21] = "What data type holds true/false values ?"
+  answers  [21] = "boolean "
+
+  questions[22] = "What is the type of this literal: \"\" ?"
+  answers  [22] = "String (it is the empty string)"
+
+  questions[23] = "A number that may have a fractional part is called  ?"
+  answers  [23] = "floating point "
+
+  questions[24] = "Is the following a correct literal double: 92,345.01 ?"
+  answers  [24] = "No (the comma is illegal)"
+
+  questions[25] = "float has about how many decimal places of precision ?"
+  answers  [25] = "7 "
+
+  questions[26] = "double has about how many decimal places of precision ?"
+  answers  [26] = "15 "
+
+  questions[27] = "What does the following literal represent: '\\n' ?"
+  answers  [27] = "The newline character "
+
+  questions[28] = "What is the type wrapper corresponding to double?"
+  answers  [28] = "Double "
+
+  questions[29] = "A language where upper and lower case letters make a difference in names is called...?"
+  answers  [29] = "case sensitive "
+
+
+  // If you are making your own flashcards, do not modify anything below this line.
+
+
+
+  // Initialize Variables
+
+  var state    = 0  // state 0 is question, state 1 is answer, 
+                    // state 2 is grade,    state 7 is final
+
+  for ( var j=0; j < asked.length; j++ ) asked[j] = 0
+
+function questionClick()
+{
+  var txt
+  var coin
+
+  if ( state == 0 )
+  {
+
+    coin = Math.floor( Math.random()*questions.length )
+    qNumber = coin
+
+    while ( asked[qNumber] == 1 && ((qNumber+1)%questions.length) != coin ) 
+      qNumber = (qNumber+1)%questions.length
+
+    if ( ((qNumber+1)%questions.length) == coin )
+    {
+      state = 7
+      txt = "You have gone through all the flash cards\n" 
+
+      txt +=  "Number of questions: " + document.aForm.count.value + "\n"
+      txt +=  "Number correct: " + document.aForm.numRight.value + "\n"
+      txt +=  "Percent correct: " +
+          Math.round((document.aForm.numRight.value*100)/document.aForm.count.value) + "\n"
+      document.aForm.questionArea.value = txt
+    }
+
+    else
+    {
+      state = 1
+      document.aForm.count.value++;
+      document.aForm.Counter.value = " " + document.aForm.count.value
+
+      document.aForm.questionArea.value  =  questions[qNumber] + "\n"
+      document.aForm.answerArea.value = " "
+    }
+
+  }
+}
+
+function answerClick()
+{
+  if ( state == 1 )
+  {
+    state = 2
+    document.aForm.answerArea.value =  answers[qNumber]
+  }
+}
+
+function rightClick()
+{
+  if ( state == 2 )
+  {
+    state = 0
+    document.aForm.numRight.value++
+    document.aForm.Right.value = " " + document.aForm.numRight.value
+    document.aForm.Wrong.value = " " + document.aForm.numWrong.value
+    asked[qNumber] = 1
+  }
+}
+
+function wrongClick()
+{
+  if ( state == 2 )
+  {
+    state = 0
+    document.aForm.numWrong.value++
+    document.aForm.Right.value = " " + document.aForm.numRight.value
+    document.aForm.Wrong.value = " " + document.aForm.numWrong.value
+  }
+}
+
+
+</SCRIPT>
+<meta name="copyright" content="2002,  Bradley Kjell">
+<meta name="author" content="Bradley Kjell kjell at ieee dot org ">
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" type="text/css" href="../ExerciseStyle.css" />
+</head>
+
+<body>
+<center>
+<h1>Flash Cards on Primitive Data Types</h1>
+</center>
+
+<FORM name="aForm">
+<center>
+<textarea name="questionArea" rows="5" cols="70" wrap="physical">
+Instructions:
+Click on button 1 to see the question. 
+Mentally answer the question.
+</textarea>
+
+<textarea name="answerArea" rows="5" cols="70" wrap="physical">
+Click on button 2 to see the correct answer. 
+Then click on the "Right" or the "Wrong"
+button as appropriate.
+Repeat.
+</textarea>
+
+<p>
+Questions so far
+&nbsp;&nbsp;
+<input type=text name="Counter" size=5 value="">
+&nbsp;&nbsp;
+Number Right:
+&nbsp;&nbsp;
+<input type=text name="Right" size=5 value="">
+&nbsp;&nbsp;
+Number Wrong:
+&nbsp;&nbsp;
+<input type=text name="Wrong" size=5 value="">
+</p>
+
+<INPUT TYPE="button" 
+  name="questionButton" 
+  value="1. Ask Question" 
+  onClick="questionClick()">
+
+&nbsp;
+
+<INPUT TYPE="button" NAME="answerButton" 
+  value="2. Show Answer" 
+  onClick=answerClick()>
+
+&nbsp;
+
+<INPUT TYPE="button" NAME="rightButton" 
+  VALUE="3. Right" 
+  onClick="rightClick()">
+
+OR
+
+<INPUT TYPE="button" NAME="wrongButton" 
+  VALUE="3. Wrong" 
+  onClick="wrongClick()">
+
+<input type="hidden" name="numRight" value="0">
+<input type="hidden" name="numWrong" value="0">
+<input type="hidden" name="count" value="0">
+</center>
+</FORM>
+
+<hr>
+<p>
+<b>Instructions:</b> &nbsp; 
+Click on button 1 to see the question. 
+Mentally answer the question.
+Click on button 2 to see the correct answer. 
+Then click on the "Right" or the "Wrong"
+button as appropriate.
+Repeat.
+</p>
+
+<p>
+Incorrectly answered questions are recycled.
+Others are removed from the deck.
+The program stops when all questions have been answered correctly.
+</p>
+
+<p>
+<hr>
+<form name="bForm">
+<center>
+<input type=button value="Click here to go back" onClick="history.back()">
+</center>
+</form>
+</p>
+
+<p>
+<font size=-1>If you want to make your own flash cards save this page to a file
+(use the File menu of the browser.)  Then look at the file with a text editor
+and follow the directions.</font>
+</p>
+
+</body>
+</html>

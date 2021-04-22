@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+
+<title>Programming Exercises</title>
+<meta name="copyright" content="2002,  Bradley Kjell">
+<meta name="author" content="Bradley Kjell kjell at ieee dot org ">
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" type="text/css" href="../ExerciseStyle.css" />
+
+</head>
+
+<body>
+<small>created 07/29/99</small>
+<hr />
+<center><h1> 
+Chapter 8  Programming Exercises
+</h1></center>
+
+<hr />
+<p>
+If I were a student and saw these exercises I would suspect that they
+were "make work" &#8212; the sort of dumb exercises that do little more
+than keep the student busy.
+Actually, athough these exercises are simple and somewhat tedious,
+they are intended to reenforce the concept of <em>primitive data type</em>
+which is of crucial importance and well worth a bit of practice at
+just this point.
+Please do them.
+</p>
+<hr />
+
+<h2>Exercise 1</h2>
+<p>
+The following program uses  
+primitive data type <code>short</code>:
+</p>
+
+<pre>
+class ShortEg
+{
+  public static void main ( String[] args )
+  {
+    short value = 32;
+    System.out.println("A short: " +  value);
+  }
+}
+</pre>
+
+<p>
+<code>value</code> in this program is a <em>variable</em>&#8212;a name for a section
+of memory that holds data using a particular data type.
+In this case <code>value</code> will be the name for 16 bits of main memory that uses
+<code>short</code> to represent an integer.
+(There is much more about variables in the rest of these notes.)
+This program puts the value 32 into <code>value</code>.
+Then it writes out:
+</p>
+
+<pre>
+A short: 32
+</pre>
+
+<p>
+In other words, the next line of the program examines the variable and writes
+out what it finds.
+</p>
+
+<p>
+<b>Your Job</b><br>  Create a file called <code>ShortEg.java</code>. 
+Compile and run it.
+Check what it writes onto the screen.
+Now edit the program so that the 32 is changed to some other small number,
+say 356.
+Compile and run the program.
+Everything should be fine.
+</p>
+
+<p>
+Next change the number to 35000 and <u>try</u> to compile and run the program.
+This number is too large to work with the data scheme short
+(in other words, it cannot be represented in 16 bits using data type <code>short</code>.)
+What happens?
+</p>
+
+<p>
+Now edit the program (don't change the 35000) so that the data type is
+<code>int</code>.  Compile and run the program.  Is there a difference?
+</p>
+
+<a href="../../cs151java.html#08">Click here </a> to go back to the main menu.
+<hr />
+
+
+<h2>Exercise 2</h2>
+<p>
+The following program uses  
+primitive data type <code>double</code>:
+</p>
+
+<pre>
+class DoubleEg
+{
+  public static void main ( String[] args )
+  {
+    double value = 32;
+    System.out.println("A double: " +  value);
+  }
+}
+</pre>
+
+<p>
+Compile and run the program.  Does its output (what it puts on the screen) differ from
+the output of the first program in the previous exercise?
+In this program,
+<code>value</code> is the name for 64 bits that uses the <code>double</code> data type
+to represent floating point numbers.
+</p>
+
+<p>
+It is perfectly OK to use the variable name <code>value</code> for both programs.
+The use of names like this is a way for us to describe what we want to
+happen in the computer; it does not permanently reserve part of 
+computer memory for any particular use.
+</p>
+
+<p>
+Now try to "break the system."  
+Look in the chapter at the chart of primitive
+data types and their allowed ranges of value.
+Change the "32" to a value that is too big for <code>double</code>.
+You may wish to use scientific notation for this.
+</p>
+
+<a href="../../cs151java.html#08">Click here </a> to go back to the main menu.
+<hr />
+
+
+<h2>Exercise 3</h2>
+
+<p>
+The following program also
+primitive data type <code>double</code>.
+This program computes and writes out the
+value of <code>exp( 32 )</code>.
+This is the base of natural logarithms "e" raised
+to the power 32.
+(Don't worry much about this.  The point of the program
+is not the math but the floating point numbers.)
+</p>
+
+<pre>
+class DoubleCrash
+{
+  public static void main ( String[] args )
+  {
+    double value = 32;
+    System.out.println("e to the power value: " +  Math.exp( value ) );
+  }
+}
+</pre>
+
+<p>
+Compile and run the program. 
+Does it compile and run correctly?
+Now change the 32 to larger and larger numbers until something goes wrong.
+</p>
+
+<a href="../../cs151java.html#08">Click here </a> to go back to the main menu.
+<hr />
+
+<h2>Exercise 4</h2>
+<p>
+The following program uses  
+primitive data type <code>char</code>:
+</p>
+
+<pre>
+class CharEg
+{
+  public static void main ( String[] args )
+  {
+    char ch = 'A' ;
+    System.out.println("A char: " +  ch );
+  }
+}
+</pre>
+
+<p>
+The variable <code>ch</code> is 16 bits of main memory that uses
+a scheme for representing characters.
+The character 'A' has be placed in it.
+The program will write:
+</p>
+
+<pre>
+A char: A
+</pre>
+
+<p>
+Do the following:
+</p>
+
+<ul>
+<li>Change the <code>'A'</code> into <code>'Z'</code> and  compile and run.</li>
+<li>Change the <code>'A'</code> into <code>'AA'</code> and try to compile the program.</li>
+<li>Change the <code>'A'</code> into <code>' '</code> and compile and run the program.
+    <ul><li>Notice carefully: there is a single space between the two ' marks.</li></ul></li>
+<li>Change the <code>'A'</code> into <code>''</code> and try to compile.
+    <ul><li>Notice carefully: there is no character between the two ' marks.</li></ul></li>
+<li>Change the <code>'A'</code> into <code>"A"</code> and try to compile the program.
+    <ul><li>(The double quotes " signify a <em>String</em>, which is something
+            different from a <em>char</em>).</li></ul></li>
+</ul>
+
+<p>
+<a href="../../cs151java.html#08">Click here </a> to go back to the main menu.
+</p>
+
+<hr>
+<b>End of Exercises</b>
+</body>
+</html>
+
