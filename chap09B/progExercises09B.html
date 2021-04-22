@@ -1,0 +1,164 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<title>Programming Exercises</title>
+<meta name="copyright" content="2004,  Bradley Kjell">
+<meta name="author" content="Bradley Kjell kjell at ieee dot org ">
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" type="text/css" href="../ExerciseStyle.css" />
+</head>
+
+
+<body>
+<p>
+<small>created 07/30/99</small>
+</p>
+<hr />
+
+<center><h1>  
+Chapter 9B  Programming Exercises </h1></center>
+
+<p>
+<b>General Instructions:</b>
+Write each of these programs as specified.
+None of these programs expect the user to enter data.
+The values one of these programs uses is "hard wired" into the program
+with declaration statements or assignment statements.
+Usually this is a poor way to write a program.
+Input will be covered in the next two chapters.
+After you read them you could come back and write
+a better version of these programs.
+</p>
+
+<p>
+<b>Note:</b>
+Each of these exercises asks you to run the program several times
+with different values.
+This is important to do!
+Playing with your programs is vital to understanding them and getting
+"feel" of programming under you skin.
+</p>
+
+<hr />
+
+<h2>Exercise 1 --- Average Rain Fall</h2>
+<p>
+Write a program that averages the rain fall for three months, April, May, and June.
+Declare and initialize a variable to the rain fall for each month.
+Compute the average, and write out the results, something like:
+</p>
+
+<blockquote>
+<pre>
+Rainfall for April:  12
+Rainfall for May  :  14
+Rainfall for June:   8
+Average rainfall:    11.333333
+</pre>
+</blockquote>
+
+<p>
+To get the numerical values to line up use the tabulation character <code>'\t'</code>
+ as part
+of the character string in the output statements.
+Check that your program prints the correct results.
+There is a beginner's error lurking in this program too!
+Did you fall victim to it?
+</p>
+
+<p>
+<a href="../../cs151java.html#09B">Click here </a> to go back to the main menu.
+</p>
+
+<hr>
+<h2>Exercise 2 --- Trigonometry</h2>
+<p>
+To compute the <em>sine</em> of a double precision value
+use this method:
+</p>
+
+<blockquote>
+<pre>
+Math.sin( value )
+</pre>
+</blockquote>
+
+<p>
+The <em>value</em> is in radians (not degrees.)
+The <em>cosine</em> is computed using
+</p>
+
+<blockquote>
+<pre>
+Math.cos( value )
+</pre>
+</blockquote>
+
+<p>
+Again, <em>value</em> is in radians.
+Write a program that:
+</p>
+
+<ol>
+<li>Computes the sine of  0.5236 radians and saves it in a variable.</li>
+<li>Computes the cosine of  0.5236 radians and saves it in another variable.</li>
+<li>Computes the square of each those two values (use the variables),
+    adds the two squares, and saves the result (in a third variable.)</li>
+<li>Writes out the three variables.</li>
+</ol>
+
+<p>
+The output statement should be something like:
+</p>
+
+<blockquote>
+<pre>
+System.out.println("sine: " + sinx + " cosine: " + cosx + " sum: " + sum );
+</pre>
+</blockquote>
+
+<p>
+Try a few other values besides 0.5236.
+</p>
+
+<p>
+<a href="../../cs151java.html#09B">Click here </a> to go back to the main menu.
+</p>
+
+<hr>
+<h2>Exercise 3 --- Degrees to Radians</h2>
+<p>
+It is sometimes hard to think in terms of radians;
+we would rather use degrees.
+Remember (from those dark days of trigonometry class) that there
+are PI radians per 180 degrees.
+So to convert an angle given in degrees to radians do this:
+</p>
+
+<blockquote>
+<pre>
+rad = degrees * Math.PI/180
+</pre>
+</blockquote>
+
+<p>
+Math.PI gives you an accurate value of PI.
+</p>
+
+<p>
+Edit the previous program so that it does the same things,
+but the angle is 30 degrees (which you will convert into radians.)
+</p>
+
+<p>
+<a href="../../cs151java.html#09B">Click here </a> to go back to the main menu.
+</p>
+
+<hr>
+<p>
+<b>End of Exercises</b>
+</p>
+
+<hr>
+</body>
+</html>
