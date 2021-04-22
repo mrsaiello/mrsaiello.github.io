@@ -1,0 +1,28 @@
+<!-- default locale -->
+<li><a href="ch24B_2.html#default locale">default locale</a></li>
+<!-- DecimalFormat -->
+<li><a href="ch24B_3.html#DecimalFormat">DecimalFormat</a></li>
+<!-- StringBuffer -->
+<li><a href="ch24B_3.html#StringBuffer">StringBuffer</a></li>
+<!--  -->
+<li><a href="ch24B_4.html#"></a></li>
+<!-- wrapper class, output -->
+<li><a href="ch24B_7.html#wrapper class, output">wrapper class, output</a></li>
+<!-- locale, changing -->
+<li><a href="ch24B_8.html#locale, changing">locale, changing</a></li>
+<!-- format pattern -->
+<li><a href="ch24B_9.html#format pattern">format pattern</a></li>
+<!-- decimal separator -->
+<li><a href="ch24B_9.html#decimal separator">decimal separator</a></li>
+<!-- 0 format character -->
+<li><a href="ch24B_10.html#0 format character">0 format character</a></li>
+<!-- neagive numbers, formatting -->
+<li><a href="ch24B_12.html#neagive numbers, formatting">neagive numbers, formatting</a></li>
+<!-- negative numbers, format pattern -->
+<li><a href="ch24B_13.html#negative numbers, format pattern">negative numbers, format pattern</a></li>
+<!-- financial number output -->
+<li><a href="ch24B_14.html#financial number output">financial number output</a></li>
+<!-- # format character -->
+<li><a href="ch24B_15.html## format character"># format character</a></li>
+<!-- formatting symbols -->
+<li><a href="ch24B_18.html#formatting symbols">formatting symbols</a></li>

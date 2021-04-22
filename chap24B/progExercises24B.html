@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<html>
+
+<head>
+<title>Programming Exercise</title>
+<meta name="copyright" content="2006,  Bradley Kjell">
+<meta name="author" content="Bradley Kjell kjell at ieee dot org ">
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" type="text/css" href="../ExerciseStyle.css" />
+
+</head>
+
+<body>
+<p>
+<small>created July 15, 2006</small>
+</p>
+
+<hr>
+<center>
+<h1><span class="blue">Programming Exercises</span></h1>
+</center>
+
+<hr />
+<p>
+1. &nbsp;  Write a program that writes out a table of sines for angles
+-90.0 to 90.0 in increments of 15 degrees.
+Use one digit in the decimal fraction for the angle and 6 digits in
+the decimal fraction for the sine.
+Align the decimal points in both columns of numbers.
+</p>
+
+<pre>
+angle      sine
+-----    --------
+-90.0   -0.707107
+-75.0   -0.608761
+-60.0   -0.5
+-45.0   -0.382683
+-30.0   -0.258819
+-15.0   -0.130526
+  0.0    0.0
+ 15.0    0.130526
+ 30.0    0.258819
+ 45.0    0.382683
+ 60.0    0.5
+ 75.0    0.608761
+ 90.0    0.707107
+</pre>
+ 
+<p>
+To align its decimal point,
+treat zero degrees as a special case.
+</p>
+
+<hr>
+
+<p>
+2.  &nbsp; Write a program that calculates the value of a deposit
+for a given initial deposit, interest rate, times interest is calculated per year,
+and number of years. Use the formula:
+</p>
+
+<pre>
+V = P(1 + r/n)<sup>nt</sup>
+
+V -- value
+P -- initial deposit
+r -- interest rate as fraction (eg 0.05)
+n -- number of times per year interest is calculated
+t -- number of years
+</pre>
+
+<p>
+Prompt the user for P, r, n, and t.
+Write out the answer accurate to cents.
+Put a currency sign in front of the answer.
+</p>
+
+<pre>
+Initial deposit: 100
+Interest rate  : 0.04
+Times per year : 4
+Number of years: 18
+Value: $204.71
+</pre>
+
+<p>
+Make all variables doubles. Use the method
+<code>Math.pow( double a, double b)</code>
+from java.lang.Math which raises <code>a</code>
+to the power <code>b</code>.
+<hr>
+
+<p>
+3. &nbsp; Write a program that calculates how many years it takes to
+double an amount of money for a given annual interest rate.
+Use the "Rule of 72" for this: divide 72.0 by the interest rate
+to get the approximate number of years it takes to double your money.
+For example, with 10% interest it takes about 7.2 years.
+</p>
+
+<p>
+Prompt the user for the interest rate, and write out the number of
+years, accurate to tenths.
+You might want to confirm the accuracy of this rule by using
+the previous program
+</p>
+
+<hr>
+<p>
+<a href="../../cs151java.html#23">Click here </a> to go back to the main menu.
+</p>
+
+</body>
+</html>
