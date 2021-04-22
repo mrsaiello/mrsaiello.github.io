@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<title>Programming Exercises</title>
+<meta name="copyright" content="2006,  Bradley Kjell">
+<meta name="author" content="Bradley Kjell kjell at ieee  dot org ">
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" type="text/css" href="../ExerciseStyle.css" />
+</head>
+
+<body>
+<hr>
+<small>created 07/30/99; revised 04/24/00</small>
+<hr>
+
+
+<center><h1> 
+Chapter 9  Programming Exercises </h1></center>
+
+<p>
+<b>General Instructions:</b>
+Write each of these programs as specified.
+None of these programs expect the user to enter data.
+The values one of these programs uses is "hard wired" into the program
+with declaration statements or assignment statements.
+Usually this is a poor way to write a program.
+Input will be covered in a few chapters.
+After you read them you could come back and write
+a better version of these programs.
+</p>
+
+<p>
+<b>Note:</b>
+Each of these exercises asks you to run the program several times
+with different values.
+This is important to do!
+Playing with your programs is vital to understanding them and getting
+the "feel" of programming under you skin.
+</p>
+
+<hr>
+<h2>Exercise 1 --- Payroll Program</h2>
+<p>
+Examine this program (from the chapter):
+</p>
+
+<blockquote>
+<pre>
+class Example
+{  
+  public static void main ( String[] args )  
+  {
+    long   hoursWorked = 40;    
+    double payRate     = 10.0, taxRate = 0.10;    
+    System.out.println("Hours Worked: " + hoursWorked );
+    System.out.println("pay Amount  : " + (hoursWorked * payRate) );
+    System.out.println("tax Amount  : " + (hoursWorked * payRate * taxRate) );
+  }
+}
+</pre>
+</blockquote>
+
+<p>
+Modify it so that each variable is declared by itself and is not initialized.
+Next write three assignment statements to assign a value to each variable.
+Run the program; examine the output.
+</p>
+
+<p>
+Now let's break something:  
+Remove one of the declarations from the program.
+Can you compile it?
+</p>
+<p>
+Now
+remove one of the initializations from the
+correct program.
+(For example, delete the characters "= 40" from the first declaration.
+Try to compile and run the program.
+When is a problem detected?
+</p>
+
+<A HREF="../../cs151java.html#09">Click here </A> to go back to the main menu.
+<hr>
+<h2>Exercise 2  --- Value of a Quadradic</h2>
+<p>
+Say that you are interested in the value of the quadradic...
+</p>
+
+<blockquote>
+<pre>
+3X<sup>2</sup> -8X + 4
+</pre>
+</blockquote>
+
+<p>
+...for several values of X.
+Write a program that has a double precision variable X.
+Assign a value to it.
+Write statement that computes a value for the quadradic
+and stores the result in another double precision variable.
+Finally write out the result, something like:
+</p>
+
+<blockquote>
+<pre>
+At X = 4.0 the value is 20.0
+</pre>
+</blockquote>
+
+<p>
+Run the program with several values for X
+(edit the program for each value of X)
+and examine the result.
+Use values with decimal points, large values, small values, negative
+values, and zero.
+Solve the equation with paper and pencil (use the quadradic formula.)
+The quadradic <em>should</em> evaluate to zero at X = 2.0
+and at X = 2/3.
+Try these values for X.
+Are the results exactly correct?
+</p>
+
+<form>
+<input type="button" value="Note" 
+onClick="alert('There is a pretty good chance that you will make a common mistake in this program.  Carefully check that your program computes the correct values.  When it does not, track down the error.')">
+</form>
+
+<A HREF="../../cs151java.html#09">Click here </A> to go back to the main menu.
+<hr>
+<h2>Exercise 3 --- Re-assigning values to Variables</h2>
+<p>
+Modify the program in exercise 2 so that one run of the program will
+evaluate and write out the value of the quadradic for three different
+values of X: 0.0, 2.0, and 4.0  (or any three values of your choice.)
+</p>
+
+<p>
+Write the program using only <u>two</u> variables, probably called 
+<em>x</em> and <em>value</em>.
+Of course this means that you will have to put different things in
+these variables in different places in the program.
+</p>
+
+<p>
+In writing the program make use of your editor's "copy" and "paste" functions
+to avoid re-typing similar lines.
+</p>
+
+<hr>
+<p>
+<A HREF="../../cs151java.html#09">Click here </A> to go back to the main menu.
+</p>
+
+<h3>End of Exercises</h3>
+<hr>
+</body>
+</html>

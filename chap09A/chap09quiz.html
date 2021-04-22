@@ -1,0 +1,546 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"/>
+<html>
+<head>
+<meta name="copyright" content="2003" />
+<meta name="author" content="B. P. Kjell" />
+<meta name="email" content="kjell at ieee dot org" />
+<meta name="robots" content="noindex,nofollow" />
+<title>
+  <img src="quizPencil.gif"/>
+  on Variables and Assignment
+</title>
+<link rel="stylesheet" type="text/css" href="../QUIZstyle.css" />
+
+<script language="JavaScript">
+function gradeQuiz( reportForm ) 
+{
+  var totalRight = 0;
+
+  for ( var count=0; count < document.forms.length-1; count++ )
+  {
+    if ( document.forms[ count ].response.value == document.forms[ count ].answer.value  )
+      totalRight++ ;
+    document.forms[ count ].correct.value=document.forms[ count ].answer.value 
+  }
+  reportForm.grade.value   = " " + totalRight
+  percent                  = (100*totalRight)/(document.forms.length-1)
+  reportForm.percent.value = " " + percent
+  if ( percent > 90 )
+    reportForm.letter.value = "A"
+  else if ( percent > 80 )
+    reportForm.letter.value = "B"
+  else if ( percent > 70 )
+    reportForm.letter.value = "C"
+  else if ( percent > 60 )
+    reportForm.letter.value = "D"
+  else
+    reportForm.letter.value = "hmm.."
+
+}
+</script>
+</head>
+<body>
+<p><small>revised: 10/04/03</small></p>
+<hr/><center><h1>
+  <img src="quizPencil.gif"/>
+  on Variables and Assignment
+</h1></center>
+<p>
+This is a practice quiz.
+The results are not recorded anywhere and do not affect your grade.
+The questions on this quiz might not appear 
+in any quiz or test that does count toward your grade.
+</p>
+
+<p>
+<b>Instructions:</b> 
+For each question,
+choose the single best answer.
+Make your choice by clicking on its button.
+You can change your answers at any time.
+When the quiz is graded, the correct answers will appear in the box after each question.
+</p>
+<br clear="all"/>
+
+
+<hr/>
+<form name="question1">
+<p>
+1.
+
+Which one of the following is a <em>reserved word</em>? 
+
+</p>
+<table>
+<tr><td><input type="radio" name="questradio" value="" onClick="question1.response.value='A'">
+<b>A.&nbsp;&nbsp;&nbsp;</b>
+ 
+<tt>apple</tt> 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question1.response.value='B'">
+<b>B.&nbsp;&nbsp;&nbsp;</b>
+ 
+<tt>7up</tt>
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question1.response.value='C'">
+<b>C.&nbsp;&nbsp;&nbsp;</b>
+ 
+<tt>grandTotal</tt> 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question1.response.value='D'">
+<b>D.&nbsp;&nbsp;&nbsp;</b>
+ 
+<tt>boolean</tt> 
+
+</tr></td>
+
+</table>
+<input type="hidden" name="answer" value="D">
+<input type="text" name="correct" value="  " size="5">
+<input type="hidden" name="response" value="" >
+</form>
+
+<hr/>
+<form name="question2">
+<p>
+2.
+
+Which one of the following is NOT a correct variable name?
+
+</p>
+<table>
+<tr><td><input type="radio" name="questradio" value="" onClick="question2.response.value='A'">
+<b>A.&nbsp;&nbsp;&nbsp;</b>
+ 
+<tt>2bad</tt> 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question2.response.value='B'">
+<b>B.&nbsp;&nbsp;&nbsp;</b>
+ 
+<tt>zero</tt>
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question2.response.value='C'">
+<b>C.&nbsp;&nbsp;&nbsp;</b>
+ 
+<tt>theLastValueButOne</tt> 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question2.response.value='D'">
+<b>D.&nbsp;&nbsp;&nbsp;</b>
+ 
+<tt>year2000</tt> 
+
+</tr></td>
+
+</table>
+<input type="hidden" name="answer" value="A">
+<input type="text" name="correct" value="  " size="5">
+<input type="hidden" name="response" value="" >
+</form>
+
+<hr/>
+<form name="question3">
+<p>
+3.
+
+Which one of the following declarations is NOT correct? 
+
+</p>
+<table>
+<tr><td><input type="radio" name="questradio" value="" onClick="question3.response.value='A'">
+<b>A.&nbsp;&nbsp;&nbsp;</b>
+ 
+<tt>double duty;</tt>  
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question3.response.value='B'">
+<b>B.&nbsp;&nbsp;&nbsp;</b>
+ 
+<tt>float loan;</tt> 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question3.response.value='C'">
+<b>C.&nbsp;&nbsp;&nbsp;</b>
+ 
+<tt>boolean value = 12;</tt>  
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question3.response.value='D'">
+<b>D.&nbsp;&nbsp;&nbsp;</b>
+ 
+<tt>int start = 34, end = 99;</tt> 
+
+</tr></td>
+
+</table>
+<input type="hidden" name="answer" value="C">
+<input type="text" name="correct" value="  " size="5">
+<input type="hidden" name="response" value="" >
+</form>
+
+<hr/>
+<form name="question4">
+<p>
+4.
+
+What does the following program output?
+</p>
+
+<pre>
+class question4
+{
+  public static void main ( String[] args )
+  {
+    int unitCost = 8;    
+    int items    = 5;
+    System.out.println("total cost: " + (unitCost * items) );
+  }
+}
+</pre>
+
+</p>
+<table>
+<tr><td><input type="radio" name="questradio" value="" onClick="question4.response.value='A'">
+<b>A.&nbsp;&nbsp;&nbsp;</b>
+ 
+<tt>total cost: + 40</tt>  
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question4.response.value='B'">
+<b>B.&nbsp;&nbsp;&nbsp;</b>
+ 
+<tt>total cost: 8*5</tt> 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question4.response.value='C'">
+<b>C.&nbsp;&nbsp;&nbsp;</b>
+ 
+<tt>total cost: 40</tt>  
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question4.response.value='D'">
+<b>D.&nbsp;&nbsp;&nbsp;</b>
+ 
+<tt>"total cost: " 40</tt>  
+
+</tr></td>
+
+</table>
+<input type="hidden" name="answer" value="C">
+<input type="text" name="correct" value="  " size="5">
+<input type="hidden" name="response" value="" >
+</form>
+
+<hr/>
+<form name="question5">
+<p>
+5.
+
+Which of the following shows the syntax of an <em>assignment statement</em>?
+
+</p>
+<table>
+<tr><td><input type="radio" name="questradio" value="" onClick="question5.response.value='A'">
+<b>A.&nbsp;&nbsp;&nbsp;</b>
+ 
+<em>variableName  &nbsp;=&nbsp;  expression</em>;
+
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question5.response.value='B'">
+<b>B.&nbsp;&nbsp;&nbsp;</b>
+ 
+<em>expression  &nbsp;=&nbsp;  expression</em>;
+
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question5.response.value='C'">
+<b>C.&nbsp;&nbsp;&nbsp;</b>
+ 
+<em>expression  &nbsp;=&nbsp;  variableName</em>;
+ 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question5.response.value='D'">
+<b>D.&nbsp;&nbsp;&nbsp;</b>
+ 
+<em>dataType  &nbsp;=&nbsp;  variableName</em>;
+ 
+
+</tr></td>
+
+</table>
+<input type="hidden" name="answer" value="A">
+<input type="text" name="correct" value="  " size="5">
+<input type="hidden" name="response" value="" >
+</form>
+
+<hr/>
+<form name="question6">
+<p>
+6.
+
+What are the two steps that take place when an <b>assignment statement</b> is executed? 
+ 
+
+</p>
+<table>
+<tr><td><input type="radio" name="questradio" value="" onClick="question6.response.value='A'">
+<b>A.&nbsp;&nbsp;&nbsp;</b>
+ 
+(i) Evaluate the Expression, and 
+(ii) Store the value in the variable.  
+ 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question6.response.value='B'">
+<b>B.&nbsp;&nbsp;&nbsp;</b>
+ 
+(i) Store the value in the variable, and  
+(ii) Evaluate the Expression.
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question6.response.value='C'">
+<b>C.&nbsp;&nbsp;&nbsp;</b>
+ 
+(i) Reserve memory , and (ii) fill it with a number.
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question6.response.value='D'">
+<b>D.&nbsp;&nbsp;&nbsp;</b>
+ 
+(i) Evaluate the variable, and (ii) store the results. 
+
+</tr></td>
+
+</table>
+<input type="hidden" name="answer" value="A">
+<input type="text" name="correct" value="  " size="5">
+<input type="hidden" name="response" value="" >
+</form>
+
+<hr/>
+<form name="question7">
+<p>
+7.
+
+What is an <em>expression</em>? 
+
+</p>
+<table>
+<tr><td><input type="radio" name="questradio" value="" onClick="question7.response.value='A'">
+<b>A.&nbsp;&nbsp;&nbsp;</b>
+ 
+The same thing as a statement. 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question7.response.value='B'">
+<b>B.&nbsp;&nbsp;&nbsp;</b>
+ 
+An expression is a list of statements that make up a program
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question7.response.value='C'">
+<b>C.&nbsp;&nbsp;&nbsp;</b>
+ 
+An expression is a combination of literals, operators, variables, 
+and parentheses used to calculate a value.
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question7.response.value='D'">
+<b>D.&nbsp;&nbsp;&nbsp;</b>
+ 
+An expression is a number expressed in digits. 
+
+</tr></td>
+
+</table>
+<input type="hidden" name="answer" value="C">
+<input type="text" name="correct" value="  " size="5">
+<input type="hidden" name="response" value="" >
+</form>
+
+<hr/>
+<form name="question8">
+<p>
+8.
+
+Which one of the following expressions is NOT correct? 
+
+</p>
+<table>
+<tr><td><input type="radio" name="questradio" value="" onClick="question8.response.value='A'">
+<b>A.&nbsp;&nbsp;&nbsp;</b>
+ 
+<tt>5 + 4</tt> 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question8.response.value='B'">
+<b>B.&nbsp;&nbsp;&nbsp;</b>
+ 
+<tt>(5 * 4)/2</tt>
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question8.response.value='C'">
+<b>C.&nbsp;&nbsp;&nbsp;</b>
+ 
+<tt>(-12 + (13 + 7)/2 ) * 4</tt> 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question8.response.value='D'">
+<b>D.&nbsp;&nbsp;&nbsp;</b>
+ 
+<tt>-12 + (13 + 7)/2 ) * 4</tt> 
+
+</tr></td>
+
+</table>
+<input type="hidden" name="answer" value="D">
+<input type="text" name="correct" value="  " size="5">
+<input type="hidden" name="response" value="" >
+</form>
+
+<hr/>
+<form name="question9">
+<p>
+9.
+
+Which of the following expressions is incorrect? 
+
+</p>
+<table>
+<tr><td><input type="radio" name="questradio" value="" onClick="question9.response.value='A'">
+<b>A.&nbsp;&nbsp;&nbsp;</b>
+ 
+<tt>(34 - 86) / 3</tt> 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question9.response.value='B'">
+<b>B.&nbsp;&nbsp;&nbsp;</b>
+ 
+<tt>(34 - 86) / -3</tt> 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question9.response.value='C'">
+<b>C.&nbsp;&nbsp;&nbsp;</b>
+ 
+<tt>34 - 86) / (23 - 3 )</tt> 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question9.response.value='D'">
+<b>D.&nbsp;&nbsp;&nbsp;</b>
+ 
+<tt>( (34 - 86) / (23 + 3 ) )</tt>
+
+</tr></td>
+
+</table>
+<input type="hidden" name="answer" value="C">
+<input type="text" name="correct" value="  " size="5">
+<input type="hidden" name="response" value="" >
+</form>
+
+<hr/>
+<form name="question10">
+<p>
+10.
+
+What is the value of the following expression:
+<pre>(2 - 6) / 2 + 9</pre> 
+
+</p>
+<table>
+<tr><td><input type="radio" name="questradio" value="" onClick="question10.response.value='A'">
+<b>A.&nbsp;&nbsp;&nbsp;</b>
+ 
+7 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question10.response.value='B'">
+<b>B.&nbsp;&nbsp;&nbsp;</b>
+ 
+8
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question10.response.value='C'">
+<b>C.&nbsp;&nbsp;&nbsp;</b>
+ 
+9 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question10.response.value='D'">
+<b>D.&nbsp;&nbsp;&nbsp;</b>
+ 
+10 
+
+</tr></td>
+
+</table>
+<input type="hidden" name="answer" value="A">
+<input type="text" name="correct" value="  " size="5">
+<input type="hidden" name="response" value="" >
+</form>
+<hr/>
+<form name="evaluateQuest">
+<center>
+<input type="button" value="grade quiz" onClick="gradeQuiz(this.form)">
+</center>
+<p>
+The number you got right:
+&nbsp;&nbsp;
+<input type=text name="grade" size="5">
+&nbsp;&nbsp;
+Percent Correct:
+&nbsp;&nbsp;
+<input type=text name="percent" size="5">
+&nbsp;&nbsp;
+Letter Grade:
+&nbsp;&nbsp;
+<input type=text name="letter" size="5">
+</p>
+</form>
+<hr/>
+<a href="../../cs151java.html#03"><img src="../contents.gif"alt="Click here" align="left" hspace="10" vspace="25"> </a> <p>
+If you have returned here from another page,
+or have re-loaded this page, you will need to click again on
+each of your choices for the grading program to work correctly.
+You may want to press the SHIFT KEY while clicking to clear
+the old answers.
+</p>
+</body>
+</html>
