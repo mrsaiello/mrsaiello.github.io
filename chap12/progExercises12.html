@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<title>Programming Exercises</title>
+<meta name="copyright" content="2002,  Bradley Kjell">
+<meta name="author" content="Bradley Kjell kjell at ieee dot org ">
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" type="text/css" href="../ExerciseStyle.css" />
+</head>
+
+<!-- 05/10/03 format changes, style sheet -->
+
+<body>
+<p>
+<small>created 08/02/99</small>
+</p>
+
+<hr>
+<center><h1><span class="blue"> 
+Chapter 12  Programming Exercises</span></h1></center>
+
+<hr>
+
+<h2>Exercise 1 --- Discount Prices</h2>
+
+<p>
+During a special sale at a store,
+a 10% discount is taken on purchases over $10.00.
+Write a program that asks for the amount of
+purchases, then calculates the discounted price.
+The purchase amount will be input in cents (as an integer):
+</p>
+
+<pre>
+Enter amount of purchases:
+2000
+Discounted price: 1800
+</pre>
+
+<p>
+Use integer arithmetic throughout the program.
+</p>
+
+<p>
+<a href="../../cs151java.html#12">Click here </a> to go back to the main menu.
+</p>
+
+<hr>
+<h2>Exercise 2 --- Order Checker</h2>
+<p>
+Bob's Discount Bolts charges the following prices:
+</p>
+
+<ul>
+<li>5 cents per bolt</li>
+<li>3 cents per nut</li>
+<li>1 cent per washer</li>
+</ul>
+
+<p>
+Write a program that asks the user for the number
+of bolts, nuts, and washers in their purchase and
+then calculates and prints out the total.
+As an added feature,
+the program checks the order.
+It is usually a mistake if there are more bolts than nuts.
+In this case the program writes out "Check the Order."
+Otherwise the program writes out "Order is OK."
+In either case the total price is written out.
+</p>
+
+<pre>
+Number of bolts:
+12
+Number of nuts:
+8
+Number of washers:
+24
+
+Check the Order
+
+Total cost: 108
+</pre>
+
+<p>
+Use <em>constants</em> for the unit cost of each item.
+In other words,
+declare something like <nobr><code>final int boltPrice = 5;</code></nobr>
+and so on in your program.
+</p>
+
+<p>
+<a href="../../cs151java.html#12">Click here </a> to go back to the main menu.
+</p>
+
+
+<hr>
+<h2>Exercise 3 --- Last Chance Gas</h2>
+<p>
+Al's Last Chance Gas station 
+sits on Route 190 
+on the edge of Death Valley.
+There is no other gas station for 200 miles.
+You are to write a program to help drivers
+decide if they need gas.
+The program  asks for:
+</p>
+
+<ul>
+<li>The capacity of the gas tank, in gallons.</li>
+<li>The indication of the gas gauge in percent
+    (full= 100, three quarters full = 75, and so on).</li>
+<li>The miles per gallon of the car.</li>
+</UL>
+
+<p>
+The program then writes out "Get Gas" or
+"Safe to Proceed" depending on if the car can
+cross the 200 miles with the gas remaining in the tank.
+</p>
+ 
+<pre>
+Tank capacity:
+12
+Gage reading:
+50
+Miles per gallon:
+30
+Get Gas!
+</pre>
+
+<p>
+<form>Use integers for all input and all arithmetic.
+&nbsp; &nbsp;  <input type="button" value="Gotcha!" 
+onClick="alert('Be careful with the arithmetic expressions you use for integer percents.  You will probably need to use parentheses to group operations correctly.')">
+</form>
+</p>
+
+<p>
+<a href="../../cs151java.html#12">Click here </a> to go back to the main menu.
+</p>
+
+<hr>
+<h2>Exercise 4 --- Pie Eating Contest</h2>
+<p>
+At the State Fair Pie Eating Contest all contestants
+in the heavyweight division must weigh within 30 pounds of
+250 pounds.
+Write a program that asks for a contestant's weight and then
+says if the contestant is allowed in the contest.
+</p>
+
+<p>
+<a href="../../cs151java.html#12">Click here </a> to go back to the main menu.
+</p>
+
+<hr>
+<h2>Exercise 5 --- Ground Beef Value Calculator</h2>
+<p>
+Different packages of ground beef have different percentages of fat
+and different costs per pound.
+Write a program that asks the user for:
+</p>
+
+<ol>
+<li>The price per pound of package "A"</li>
+<li>The percent lean in package "A"</li>
+<li>The price per pound of package "B"</li>
+<li>The percent lean in package "B"</li>
+</ol>
+
+<p>
+The program then calculates the cost per pound of lean (non-fat)
+beef for each package and writes out which is the best value.
+</p>
+
+<pre>
+Price per pound package A:
+2.89
+Percent lean package A:
+85
+Price per pound package B:
+3.49
+Percent lean package B:
+93
+
+Package A cost per pound of lean:3.4
+Package B cost per pound of lean:3.752688
+Package A is the best value
+</pre>
+
+<p>
+Assume that the two packages will not come out equal
+in value.
+</p>
+
+<p>
+<a href="../../cs151java.html#12">Click here </a> to go back to the main menu.
+</p>
+
+<hr>
+<h2>Exercise 5 --- Y2K Problem Detector</h2>
+<p>
+Write a program that asks a user for their birth year
+encoded as two digits (like "62") and for the current
+year, also encoded as two digits (like "99").
+The program is to correctly write out the users age in
+years.
+</p>
+
+<pre>
+Year of Birth:
+62
+Current year:
+99
+Your age: 37
+
+----- another run of the program --------
+Year of Birth:
+62
+Current year:
+00
+Your age: 38
+
+</pre>
+
+<p>
+<a href="../../cs151java.html#12">Click here </a> to go back to the main menu.
+</p>
+
+<hr>
+<h2>Exercise 6 --- Wind Chill Index</h2>
+
+<p>
+(You will need to include  <em>java.Math.*</em> and use
+floating point input for this exercise.)
+</p>
+
+<p> The <em>wind chill index</em> (WCI) is calculated from the wind speed <code>v</code> 
+  in miles per hour and the temperature <code>t</code> in Fahrenheit. Three formulas 
+  are used, depending on the wind speed: </p>
+
+<pre>
+if (0 &lt;= v &lt;= 4) then WCI = t
+
+if (v &gt;=45) then WCI = 1.6t - 55
+
+otherwise, WCI = 91.4 + (91.4 - t)(0.0203v - 0.304(v)<sup>1/2</sup> - 0.474)
+</pre>
+
+<p>
+To calculate <code>(v)<sup>1/2</sup></code> use
+<code>Math.sqrt( double )</code>.
+</p>
+
+<p>
+<a href="../../cs151java.html#12">Click here </a> to go back to the main menu.
+</p>
+
+<hr>
+<p>
+<b>end of the exercises</b>
+</p>
+
+<hr>
+</body>
+
+</html>
