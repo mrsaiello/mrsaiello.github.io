@@ -1,0 +1,221 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<html>
+<head>
+<title>Programming Exercises</title>
+<meta name="copyright" content="2002,  Bradley Kjell">
+<meta name="author" content="Bradley Kjell kjell@ieee.org ">
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" type="text/css" href="../ExerciseStyle.css" />
+
+</head>
+
+<body>
+<p>
+<small>created 08/09/99</small>
+</p>
+<hr />
+
+<center><h1><span class="blue">
+Chapter 18  Programming Exercises</span></h1></center>
+
+<hr />
+<br>
+<h2>Exercise 1 --- Miles per Gallon</h2>
+
+<p>
+Write a program that calculates miles per gallon for
+a list of cars.
+The data for each car consists of initial odometer reading,
+final odometer reading, and number of gallons of gas.
+The user signals that there are no more cars by entering
+a negative initial odometer reading.
+</p>
+
+<pre>
+Miles Per Gallon Program
+Initial miles:
+15000
+Final miles:
+15250
+Gallons
+10
+Miles per Gallon: 25.0
+
+Initial miles:
+107000
+Final miles:
+107450
+Gallons
+15
+Miles per Gallon: 30.0
+
+Initial miles:
+-1
+bye
+</pre>
+
+<A HREF="../../cs151java.html#18">Click here </A> to go back to the main menu.
+
+<hr />
+
+<h2>Exercise 2 --- In-range Adder</h2>
+<p>
+Write a program that asks the user for the low
+and high integer in a range of integers.
+The program then asks the user for integers
+to be added up.
+The program computes two sums:
+</p>
+
+<ul>
+<li>The sum of integers that are in the range (inclusive),</li>
+<li>and the sum of integers that are outside of the range.</li>
+</ul>
+
+<p>
+The user signals the end of input with a 0.
+</p>
+
+<pre>
+In-range Adder
+Low end of range:
+20
+High end of range:
+50
+Enter data:
+21
+Enter data:
+60
+Enter data:
+49
+Enter data:
+30
+Enter data:
+91
+Enter data:
+0
+Sum of in range values: 100
+Sum of out of range values: 151
+</pre>
+
+<A HREF="../../cs151java.html#18">Click here </A> to go back to the main menu.
+<hr>
+<br>
+
+<h2>Exercise 3 --- Shipping Cost Calculator</h2>
+<p>
+A mail order company charges $3.00 for handling,
+free shipping for orders 10 pounds or less,
+plus $0.25 for each pound over 10.
+Write a program that repeatedly asks the user for the
+weight of an order, then writes out the shipping charge.
+The program stops when a weight of zero or less is
+entered.
+</p>
+
+<pre>
+Weight of Order:
+5
+Shipping Cost: $3.00
+
+Weight of Order
+20
+Shipping Cost: $5.50
+
+Weight of Order
+0
+
+bye
+</pre>
+
+<A HREF="../../cs151java.html#18">Click here </A> to go back to the main menu.
+<hr>
+<br>
+
+<h2>Exercise 4 --- Area of Rectangles</h2>
+<img src="progEx3.gif" align="right" hspace="20" />
+
+<p>
+A computer aided design program expects users to enter 
+the coordinates two corners for each of several of rectangles (see diagram.)
+The sides of the rectangles are assumed to be parallel to the X and Y axes.
+The coordinates of each corner is entered as a pair of integers, first the
+X coordinate and then the Y coordinate.
+The origin of the coordinate system (0,0) is in the upper left, so Y increases
+going downward, and X increases to the right.
+</p>
+
+<p>
+For each rectangle,
+the program calculates and writes out the height, the width, and the area of
+the rectangle.
+The two corners entered for each rectangle must be diagonally opposite (upper left and
+lower right, or upper right and lower left), but which choice is made for each
+rectangle is up to the user.
+The user can enter the corners in any order.
+Height and width are always positive (the program will have to adjust its calculations
+so that this is true.)
+</p>
+
+<p>
+The program ends gracefully when the user enters corners which cannot be those
+of a rectangle (either the height is zero, the width is zero, or both.)
+</p>
+
+<pre>
+Computer Aided Design Program
+First corner X coordinate:
+100
+First corner Y coordinate:
+100
+Second corner X coordinate:
+250
+Second corner Y coordinate
+200
+Width:  150  Height: 100   Area: 15000
+
+First corner X coordinate:
+250
+First corner Y coordinate:
+200
+Second corner X coordinate:
+100
+Second corner Y coordinate
+100
+Width:  150  Height: 100   Area: 15000
+
+First corner X coordinate:
+100
+First corner Y coordinate:
+200
+Second corner X coordinate:
+250
+Second corner Y coordinate
+100
+Width:  150  Height: 100   Area: 15000
+
+First corner X coordinate:
+100
+First corner Y coordinate:
+100
+Second corner X coordinate:
+100
+Second corner Y coordinate
+100
+Width:  0  Height: 0   Area: 0
+
+finished
+</pre>
+
+<A HREF="../../cs151java.html#18">Click here </A> to go back to the main menu.
+
+<hr>
+<br>
+
+<p>
+<center><b>
+End of exercises.</center></b>
+</p>
+</body>
+</html>

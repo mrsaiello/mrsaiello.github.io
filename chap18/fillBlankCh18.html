@@ -1,0 +1,333 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+
+<title>
+Fill in the Blanks
+</title>
+
+<meta name="copyright" content="2003,  Bradley Kjell">
+<meta name="author" content="kjell at ieee dot org ">
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" type="text/css" href="../ExerciseStyle.css" />
+
+</head>
+
+<body>
+<p>
+<small><b>creation: 08/08/99</b></small>
+</p>
+
+<hr>
+<center><h1>
+Fill in the Blanks 
+</h1></center> 
+
+<p>
+<b>Instructions:</b> &nbsp;
+This is an ungraded fill-in-the-blank exercise.
+Each question consists of a sentence with one or two words left out.
+A button represents the missing word(s).
+For each question,
+think of the word or phrase that should fill each blank,
+then click on the buttons to see if you are correct.
+No grade is calculated for this exercise. 
+</p>
+<hr>
+
+
+<!-- ------------------------start of  question ------------------------------ -->
+<blockquote>
+<b>Rule for Matching if and else:</b>
+ &nbsp; 
+
+<em>Within each pair of matching braces:</em>
+start with the first <code>if</code> and work downward.
+Each <code>else</code> matches the closest previous unmatched <code>if</code>.
+An <code>if</code> matches only one <code>else</code> 
+and an <code>else</code> matches only one  <code>if</code>.
+</blockquote>
+
+<p>
+<b>1.</b> &nbsp; Click on the 
+<input type="button" value="else  "> 
+that matches the <b>IF</b> in
+capitals (of course, in a real Java program the <code>if</code> has to be lower case.)
+</p>
+
+<form>
+<center>
+<table cellpadding="10" width="75%" border="1" bordercolor="gray" bgcolor="white">
+<tr valign="top">
+<td>
+<div align="left">
+  <pre>
+  <b>IF</b> ( val == 34 )
+       sum = sum + val;
+  <input type="button" 
+  value="else  "                    
+  name="button1" 
+  onClick="alert('RIGHT')">
+      sum = sum - val;
+  
+  if ( sum &lt; limit )
+       flag = true;
+  <input type="button" 
+  value="else  "                    
+  name="button1" 
+  onClick="alert('wrong')">
+       flag = false;
+  </pre>
+</div>
+</td>
+<td>
+<div align="left">
+  <pre>
+  <b>IF</b> ( val == 34 )
+      if ( sum &lt; limit )
+           sum = sum + val;
+      <input type="button" 
+  value="else  "                    
+  name="button1" 
+  onClick="alert('wrong')">
+          sum = sum - val;
+  <input type="button" 
+  value="else  "                    
+  name="button1" 
+  onClick="alert('RIGHT')">
+      sum = sum + 1;
+  </pre>
+</div>
+</td>
+</tr>
+
+<tr valign="top">
+<td>
+<div align="left">
+  <pre>
+  if ( val == 34 )
+       sum = sum + val;
+  <input type="button" 
+  value="else  "                    
+  name="button1" 
+  onClick="alert('wrong')">
+      sum = sum - val;
+  
+  <b>IF</b> ( sum &lt; limit )
+       flag = true;
+  <input type="button" 
+  value="else  "                    
+  name="button1" 
+  onClick="alert('RIGHT')">
+       flag = false;
+  </pre>
+</div>
+</td>
+<td>
+  <div align="left">
+  <pre>
+  if ( val == 34 )
+      <b>IF</b> ( sum &lt; limit )
+           sum = sum + val;
+      <input type="button" 
+  value="else  "                    
+  name="button1" 
+  onClick="alert('RIGHT')">
+          sum = sum - val;
+  <input type="button" 
+  value="else  "                    
+  name="button1" 
+  onClick="alert('wrong')">
+      sum = sum + 1;
+  </pre>
+</div>
+</td>
+</tr>
+</table>
+</center>
+</form>
+<hr>
+
+<!-- ------------------------end of  question --------------------------------- -->   
+
+
+<p>
+<b>2.</b> &nbsp; Click on the
+<input type="button" value="else  "> 
+that matches the <b>IF</b> in
+capitals.
+</p>
+
+<center>
+<table cellpadding="10" width="75%" border="border" bgcolor="white" bordercolor="gray">
+<tr valign="top">
+<td>
+  <div align="left">
+<pre>
+<b>IF</b> ( val == 34 )
+{
+     sum = sum + val;
+     val = 0;
+     next= 5;
+}
+<input type="button" 
+value="else  "                    
+name="button1" 
+onClick="alert('RIGHT')">
+{
+    sum = sum - val;
+
+    if ( sum &lt; limit )
+         flag = true;
+    <input type="button" 
+value="else  "                    
+name="button1" 
+onClick="alert('wrong')">
+         flag = false;
+}
+</pre>
+</div>
+</td>
+<td>
+  <div align="left">
+  <pre>
+  <b>IF</b> ( val == 34 )
+  {
+      if ( sum &lt; limit )
+           sum = sum + val;
+  }
+  <input type="button" 
+  value="else  "                    
+  name="button1" 
+  onClick="alert('RIGHT')">
+  {
+      sum = sum - val;
+      val = sum + 1;
+  }
+  </pre>
+  </div>
+</td>
+</tr>
+
+<tr valign="top">
+<td>
+  <div align="left">
+  <pre>
+  if ( val == 34 )
+  {
+       sum = sum + val;
+       val = 0;
+       next= 5;
+  }
+  <input type="button" 
+  value="else  "                    
+  name="button1" 
+  onClick="alert('wrong')">
+  {
+      sum = sum - val;
+  
+      <b>IF</b> ( sum &lt; limit )
+           flag = true;
+      <input type="button" 
+  value="else  "                    
+  name="button1" 
+  onClick="alert('RIGHT')">
+           flag = false;
+  }
+  </pre>
+  </div>
+</td>
+<td>
+  <div align="left">
+  <pre>
+  <b>IF</b> ( val == 34 )
+  {
+      if ( sum &lt; limit )
+           sum = sum + val;
+      if ( val &gt;= limit )
+           val = sum - limit;
+      <input type="button" 
+  value="else  "                    
+  name="button1" 
+  onClick="alert('wrong')">
+           val = 0;
+  }
+  <input type="button" 
+  value="else  "                    
+  name="button1" 
+  onClick="alert('RIGHT')">
+      if ( val = -12 )
+          sum = 0;
+      <input type="button" 
+  value="else  "                    
+  name="button1" 
+  onClick="alert('wrong')">
+          limit = 88;
+  </pre>
+  </div>
+</td>
+</tr>
+
+</table>
+</center>
+</form>
+<hr>
+
+<!-- ------------------------end of  question --------------------------------- -->   
+
+<!-- ------------------------start of  question ------------------------------ -->
+<form>
+<p>
+<b>3.</b> &nbsp; The idea of a
+<input type="button" 
+value="_________"                    
+name="button1" 
+onClick="button1.value=' sentinel '">  
+controled loop
+is that there is a special value that
+says when the loop is done.
+</p>
+</form>
+<br>
+<!-- ------------------------end of  question --------------------------------- -->   
+
+<!-- ------------------------start of  question ------------------------------ -->
+<form>
+<p>
+<b>4.</b> &nbsp; The special sentinel value
+must not be a value that could ever occur in
+the
+<input type="button" 
+value="_________"                    
+name="button1" 
+onClick="button1.value=' data '">  .
+</form>
+</p>
+<br>
+<!-- ------------------------end of  question --------------------------------- -->   
+
+<!-- ------------------------start of  question ------------------------------ -->
+<form>
+<p>
+<b>5.</b> &nbsp; Complete the following fragment so that if <code>data</code> is "Hello"
+it writes "World".
+<pre>
+if ( data.<input type="button" 
+value="_________"                    
+name="button1" 
+onClick="button1.value=' equals '"> ( "Hello" ) )
+    System.out.println("World");
+</pre>
+</p>
+</form>
+<br>
+<!-- ------------------------end of  question --------------------------------- -->   
+
+<hr>
+<p>
+End of the Exercise.  If you want to do it again, click on "Refresh" in your
+browser window.
+<A HREF="../../cs151java.html#18">Click here </A> to go back to the main menu.
+</p>
+</body>
+</html>
