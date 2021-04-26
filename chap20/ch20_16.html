@@ -1,0 +1,122 @@
+
+<!doctype html> 
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<meta name="robots" content="index,follow">
+<title>Building the Password </title>
+<link rel="stylesheet" href=../CAIstyleRev2.css>
+
+</head>
+
+<body>
+
+
+<!-- ANSWER DIVISION -->
+
+<div class="answer">
+     <div class="topnavigation">
+     
+     </div>
+<h3>Answer:</h3>
+<p>
+Yes.  But I think that is easier to build the string in three steps.
+</p>
+
+
+<br class="clearfloats"> 
+</div>
+
+<!-- LESSON DIVISION -->
+<div class="lesson"  onclick='doHighlight()'>
+<h1>Building the Password </h1>
+
+<a id="charAt()_method_of_String"></a>
+<p>
+Next, the program builds the password:
+</p>
+
+<pre class="program">
+    String password = "";
+    int j = 0;
+    
+    while ( j&lt;digits )
+    {
+      password = password + choices.charAt( rand.nextInt( choices.length() ) );
+      j = j + 1;
+    }
+</pre>
+
+<div class="left">
+<p>
+First the password is initialized to the empty string.
+Then random characters, selected from <code>choices</code>, 
+are appended to it, one-by-one.
+The expression
+</p>
+
+<pre>
+rand.nextInt( choices.length() )
+</pre>
+
+<p>
+randomly picks an integer from 0 up to (but not including) the length of the <code>choices</code> string.
+Then that integer is used to select a character from the <code>choices</code> string.
+</p>
+</div>
+
+<div class="right">
+
+<p>
+Say that the random integer were <code>7</code>. Then
+</p>
+
+<pre>
+choices.charAt( 7 )
+</pre>
+
+<p>
+is character number 7 in the string  <code>choices</code>, where counting starts at zero.
+This character is appended to the password and the loop repeats.
+(For more about string methods, see chapter 29.)
+</p>
+</div>
+
+
+<br class="clearfloats"> 
+</div>
+
+<!-- QUESTION DIVISION -->
+<div class="question">
+<h3> QUESTION 16:</h3>
+<p>
+Examine this statement:
+</p>
+
+<pre>
+password = password + choices.charAt( rand.nextInt( choices.length() ) );
+</pre>
+
+<p>
+Four things happen in that one statement.
+This can be hard to keep track of.
+Is the following code fragment equivalent?
+</p>
+
+<pre>
+int range = choices.length();
+int characterNumber = rand.nextInt( range );
+char ch = choices.charAt( characterNumber );
+password = password + ch;
+</pre>
+
+     <div class="navigation">
+     <a href="ch20_15.html"><img src="../backIcon.gif" alt="go to previous page"></a> &nbsp; 
+     <a href="../../index.html#20"><img src="../homeIcon.gif" alt="go to home page"></a> &nbsp;
+     <a href="ch20_17.html"><img src="../nextIcon.gif" alt="go to next page"></a>
+     </div>
+</div>
+
+</body>
+</html>

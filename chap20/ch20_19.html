@@ -1,0 +1,140 @@
+
+<!doctype html> 
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<meta name="robots" content="index,follow">
+<title>Complete Program </title>
+<link rel="stylesheet" href=../CAIstyleRev2.css>
+
+</script>
+</head>
+
+<body>
+
+
+<!-- ANSWER DIVISION -->
+
+<div class="answer">
+     <div class="topnavigation">
+    
+     </div>
+<h3>Answer:</h3>
+<p>
+Just one, as usual. The one random number generator is used
+to simulate a pair of dice or one eleven-sided die, as needed.
+</p>
+
+
+<br class="clearfloats"> 
+</div>
+
+<!-- LESSON DIVISION -->
+<div class="lesson"  onclick='doHighlight()'>
+<h1>Complete Program </h1>
+
+<a id="die_choice_game"></a>
+
+<div class="middle">
+
+<p>
+Here is the complete program.
+Its sections will be expained shortly.
+</p>
+
+<p>
+The sections of the program match the boxes in the flowchart.
+</p>
+
+<p>
+You can copy and paste this program to a file and play with it,
+if you want.
+</p>
+</div>
+
+<br style="clear:both">
+
+<pre class="program">
+import java.util.*;
+
+class DiceChoiceGame
+{
+  public static void main ( String[] args )
+  {
+    <span class="green">// Declare and Initialize</span>
+    final int endScore=10;
+    Scanner scan = new Scanner( System.in );
+    Random rand = new Random();
+    int playerScore=0, compScore=0;
+    int playerToss, compToss;
+    
+    <span class="green">// Play Rounds until one player reaches ending score</span>
+    while ( playerScore&lt;endScore &amp;&amp; compScore&lt;endScore )
+    {
+      <span class="green">// Computer's Toss</span>
+      compToss = rand.nextInt(6)+1 + rand.nextInt(6)+1 ;
+      System.out.println("The Computer tosses: " + compToss);
+      
+      <span class="green">// Player's Toss</span>
+      System.out.print("Toss 1 eleven-sided die, or 2 six-sided dice (enter 1 or 2)? ");
+      String numDice = scan.nextLine();
+      
+      if ( numDice.equals("1") )
+      {
+        playerToss = rand.nextInt(11)+2 ;
+        System.out.println("You throw 1 die and get: " + playerToss );
+      }
+      else
+      {
+        playerToss = rand.nextInt(6)+1 + rand.nextInt(6)+1 ;
+        System.out.println("You throw 2 dice and get: " + playerToss );
+      }
+      
+      <span class="green">// Determine Winner of Round and Adjust Scores</span>
+      if ( playerToss&gt;compToss )
+      {
+        playerScore = playerScore+1;
+        System.out.println("You win the round!");
+      }
+      else
+      {
+        compScore = compScore+1;
+        System.out.println("You loose the round!");
+      }      
+      System.out.println("Score: computer " + compScore + ", you " + playerScore + "\n");
+    }
+    
+    <span class="green">// Determine Winner of the Game</span>
+    System.out.println("Final Score: computer " + compScore + ", you " + playerScore);
+    
+    if ( compScore &gt; playerScore ) 
+      System.out.println("The Computer Wins!");
+    else
+      System.out.println("You Win the Game!");
+    
+  }
+}</pre>
+
+
+
+
+<br class="clearfloats"> 
+</div>
+
+<!-- QUESTION DIVISION -->
+<div class="question">
+<h3> QUESTION 19:</h3>
+<p>
+Will one player or the other eventually win?  Or is a draw possible?
+</p>
+
+     <div class="navigation">
+     <a href="ch20_18.html"><img src="../backIcon.gif" alt="go to previous page"></a> &nbsp; 
+     <a href="../../index.html#20"><img src="../homeIcon.gif" alt="go to home page"></a> &nbsp;
+     <a href="ch20_20.html"><img src="../nextIcon.gif" alt="go to next page"></a>
+     </div>
+</div>
+
+</body>
+</html>

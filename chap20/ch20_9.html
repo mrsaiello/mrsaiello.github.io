@@ -1,0 +1,112 @@
+
+<!doctype html> 
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<meta name="robots" content="index,follow">
+<title>Two-dice Program</title>
+<link rel="stylesheet" href=../CAIstyleRev2.css>
+
+</head>
+
+<body>
+
+
+<!-- ANSWER DIVISION -->
+
+<div class="answer">
+     <div class="topnavigation">
+     
+     </div>
+<h3>Answer:</h3>
+
+<p>
+Logically, no.
+But it is often convenient.  
+Each object of a simulation might contain its own random number generator. 
+If you were simulating tadpoles swimming about randomly in a pond,
+you would probably have a random number generator as part of each tadpole object.
+</p>
+
+
+<br class="clearfloats"> 
+</div>
+
+<!-- LESSON DIVISION -->
+<div class="lesson"  onclick='doHighlight()'>
+<h1>Two-dice Program</h1>
+
+<img src="dice12.gif" class="rightimage" alt="two dice">
+<p>
+Here is a program that simulates the toss of two dice:
+</p>
+
+<pre class="program">
+import java.util.*;
+
+public class TwoDieToss
+{
+
+  public static void main ( String[] args )
+  {
+    Scanner scan = new Scanner( System.in );    
+    Random rand = new Random();
+    
+    while ( true )
+    {
+      System.out.print("You toss a " + (rand.nextInt(6)+1 + rand.nextInt(6)+1) );
+      String input = scan.nextLine();
+    }
+  }
+  
+}
+</pre>
+
+<div class="left">
+<p>
+The two tosses and the sum of the spots is implemented in the expression:
+</p>
+
+<pre>
+(rand.nextInt(6)+1 + rand.nextInt(6)+1)
+</pre>
+
+<p>
+Each call to <code>nextInt(6)</code> is completely independent of the previous call,
+so this is the same as throwing two independent dice.
+</p>
+
+<p>
+Throwing one die twice and adding up each outcome is equivalent 
+to throwing two dice and adding up each die.
+However, throwing a 12-sided die once is <u>not</u> equivalent to
+throwing two 6-siced dice. 
+</p>
+</div>
+
+
+<br class="clearfloats"> 
+</div>
+
+<!-- QUESTION DIVISION -->
+<div class="question">
+<h3> QUESTION 9:</h3>
+<p>
+Would the following work to simulate two dice:
+</p>
+
+<pre>
+(rand.nextInt(11)+2)
+</pre>
+
+
+     <div class="navigation">
+     <a href="ch20_8.html"><img src="../backIcon.gif" alt="go to previous page"></a> &nbsp; 
+     <a href="../../index.html#20"><img src="../homeIcon.gif" alt="go to home page"></a> &nbsp;
+     <a href="ch20_10.html"><img src="../nextIcon.gif" alt="go to next page"></a>
+     </div>
+</div>
+
+</body>
+</html>
