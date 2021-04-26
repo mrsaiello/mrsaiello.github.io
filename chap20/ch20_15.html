@@ -1,0 +1,106 @@
+
+<!doctype html> 
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<meta name="robots" content="index,follow">
+<title>String of Characters </title>
+<link rel="stylesheet" href=../CAIstyleRev2.css>
+
+</head>
+
+<body>
+
+
+<!-- ANSWER DIVISION -->
+
+<div class="answer">
+     <div class="topnavigation">
+     
+     </div>
+<h3>Answer:</h3>
+<p>
+The loop continues prompting until the user enters an integer greater or equal to 5.
+(Actually, 5 is dangerously small for a password.)
+</p>
+
+
+<br class="clearfloats"> 
+</div>
+
+<!-- LESSON DIVISION -->
+<div class="lesson"  onclick='doHighlight()'>
+<h1>String of Characters </h1>
+
+<a id="toUpperCase()_method_of_String"></a>
+<div class="left">
+<p>
+Next, the program assembles a string of all the characters that
+could go into a password:
+</p>
+ 
+
+<pre style="text-align:left">
+String choices = "abcdefghijklmnopqrstuvwxyz" ;
+choices = choices + choices.toUpperCase() ;
+choices = choices + "1234567890" ;
+</pre>
+
+ 
+<p>
+The first of these three statements creates a string literal containing the 
+lower case alphabet.
+Then the expression <code>choices.toUpperCase()</code> creates a string that
+is all upper case, based on the string currently referred to by <code>choices</code>.
+This string is then concatenated onto the original <code>choices</code> string:
+</p>
+ 
+
+<pre style="text-align:left">
+choices = choices + choices.toUpperCase();
+</pre>
+
+ 
+<p>
+Recall that <code>+</code> means "string concatenation".
+Finally, the string <code>"1234567890"</code> is concatenated onto the string to produce the
+final string, shown below:
+</p>
+
+
+<pre style="text-align:center">
+"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+</pre>
+
+
+</div> 
+
+<br class="clearfloats"> 
+</div>
+
+<!-- QUESTION DIVISION -->
+<div class="question">
+<h3> QUESTION 15:</h3>
+<p>
+Would the statement
+</p>
+
+<pre>
+choices = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+</pre>
+
+<p>
+have worked as well?
+</p>
+
+
+     <div class="navigation">
+     <a href="ch20_14.html"><img src="../backIcon.gif" alt="go to previous page"></a> &nbsp; 
+     <a href="nolink"><img src="../homeIcon.gif" alt="go to home page"></a> &nbsp;
+     <a href="ch20_16.html"><img src="../nextIcon.gif" alt="go to next page"></a>
+     </div>
+</div>
+
+</body>
+</html>

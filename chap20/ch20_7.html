@@ -1,0 +1,89 @@
+
+<!doctype html> 
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<meta name="robots" content="index,follow">
+<title> Example Output</title>
+<link rel="stylesheet" href=../CAIstyleRev2.css>
+
+</head>
+
+<body>
+
+
+<!-- ANSWER DIVISION -->
+
+<div class="answer">
+     <div class="topnavigation">
+     
+     </div>
+<h3>Answer:</h3>
+<p>
+The size of the desired range is 11 (-5 to +5), so the parameter to <code>nextInt()</code>
+is 11.
+The minimum value of the desired range is -5, so add that to the expression:
+</p>
+
+<pre>
+val = rand.nextInt(11)-5;
+</pre>
+
+<p>
+The minimum of the values that  <code>nextInt(11)</code> returns is 0;
+adding -5 to that gives the mimimum of the range we want.
+</p>
+
+
+<br class="clearfloats"> 
+</div>
+
+<!-- LESSON DIVISION -->
+<div class="lesson"  onclick='doHighlight()'>
+<h1> Example Output</h1>
+
+<p>
+Here is  a run of the die-tossing program:
+</p>
+
+<pre class="program">
+
+K:\cai\&gt;java DieToss
+You toss a 2
+You toss a 1
+You toss a 4
+You toss a 4
+You toss a 6
+You toss a 5
+You toss a 3
+You toss a 2Exception in thread "main" java.util.NoSuchElementException: No line found
+        at java.util.Scanner.nextLine(Unknown Source)
+        at DieToss.main(DieToss.java:15)
+</pre>
+
+<p>
+The user hit control-C to end the program.
+</p>
+
+
+<br class="clearfloats"> 
+</div>
+
+<!-- QUESTION DIVISION -->
+<div class="question">
+<h3> QUESTION 7:</h3>
+<p>
+(Thought Question: ) You want to simulate the toss of
+two dice.  Do you need two random number generators?
+</p>
+
+     <div class="navigation">
+     <a href="ch20_6.html"><img src="../backIcon.gif" alt="go to previous page"></a> &nbsp; 
+     <a href="nolink"><img src="../homeIcon.gif" alt="go to home page"></a> &nbsp;
+     <a href="ch20_8.html"><img src="../nextIcon.gif" alt="go to next page"></a>
+     </div>
+</div>
+
+</body>
+</html>

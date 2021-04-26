@@ -1,0 +1,109 @@
+
+<!doctype html> 
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<meta name="robots" content="index,follow">
+<title>Example Output</title>
+<link rel="stylesheet" href=../CAIstyleRev2.css>
+
+</head>
+
+<body>
+
+
+<!-- ANSWER DIVISION -->
+
+<div class="answer">
+     <div class="topnavigation">
+     
+     </div>
+<div class="questionEcho">
+<pre>
+(rand.nextInt(11)+2)
+</pre>
+</div>
+<h3>Answer:</h3>
+<p>
+No.  The range is the same as with two dice, 2 through 12, 
+but each of those outcomes is equally likely,
+unlike the case with two dice.
+</p>
+
+
+<br class="clearfloats"> 
+</div>
+
+<!-- LESSON DIVISION -->
+<div class="lesson"  onclick='doHighlight()'>
+<h1>Example Output</h1>
+
+<p>
+Here is a sample run of the above (correct) program:
+</p>
+
+<pre class="program">
+You toss a 11
+You toss a 8
+You toss a 6
+You toss a 5
+You toss a 5
+You toss a 5
+You toss a 6
+You toss a 6
+You toss a 6
+You toss a 12
+You toss a 4
+You toss a 5 Exception in thread "main" . . .
+</pre>
+
+<p>
+Here is a sample run of a program that (incorrectly) uses  <code>(rand.nextInt(11)+2)</code>:
+</p>
+
+<pre class="program">
+You toss a 6
+You toss a 10
+You toss a 11
+You toss a 4
+You toss a 6
+You toss a 5
+You toss a 11
+You toss a 9
+You toss a 7
+You toss a 2
+You toss a 4
+You toss a 3 Exception in thread "main" . . .
+</pre>
+
+<div class="left">
+<p>
+With such a small sample, you can't tell for sure that something is wrong,
+but you might be suspicious.
+To confirm your suspicions, gather much more data, then count the number of times each outcome
+occurs and check that the results match what you expect.
+This is part of what is studied in a probablility and statistics course.
+</p>
+</div>
+
+
+<br class="clearfloats"> 
+</div>
+
+<!-- QUESTION DIVISION -->
+<div class="question">
+<h3> QUESTION 10:</h3>
+<p>
+Would you ever need a random floating point value?
+</p>
+
+     <div class="navigation">
+     <a href="ch20_9.html"><img src="../backIcon.gif" alt="go to previous page"></a> &nbsp; 
+     <a href="nolink"><img src="../homeIcon.gif" alt="go to home page"></a> &nbsp;
+     <a href="ch20_11.html"><img src="../nextIcon.gif" alt="go to next page"></a>
+     </div>
+</div>
+
+</body>
+</html>

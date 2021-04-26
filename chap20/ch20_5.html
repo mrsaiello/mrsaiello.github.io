@@ -1,0 +1,112 @@
+
+<!doctype html> 
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<meta name="robots" content="index,follow">
+<title>  nextInt() </title>
+<link rel="stylesheet" href=../CAIstyleRev2.css>
+
+</head>
+
+<body>
+
+
+<!-- ANSWER DIVISION -->
+
+<div class="answer">
+     <div class="topnavigation">
+    
+     </div>
+<h3>Answer:</h3>
+<p>
+Yes. For example, a solitaire player who has just lost a game might
+want to play the game again
+with the same shuffle of the deck
+to see if he can win with a better strategy.
+</p>
+
+
+<br class="clearfloats"> 
+</div>
+
+<!-- LESSON DIVISION -->
+<div class="lesson"  onclick='doHighlight()'>
+<h1> <code>nextInt()</code></h1>
+
+<a id="nextInt(),_method_of_Random"></a>
+
+<blockquote class="display">
+
+<code>
+int nextInt() 
+</code>
+
+&#8212; Returns the next pseudorandom, uniformly distributed <code>int</code> value.<br>
+All possible <code>int</code> values, positive, zero, and negative, are in the range of values returned.
+</blockquote>
+
+<blockquote class="display">
+
+<code>
+int nextInt( int num ) 
+</code>
+&#8212; Returns a pseudorandom, uniformly distributed <code>int</code> <br>value between 0 (inclusive) 
+and <code>num</code> (exclusive).
+</blockquote>
+
+<br style="clear:both">
+
+<div class="left">
+<p>
+Above are two methods (out of several) that <code>Random</code> objects provide.
+The second method is the one most often used.
+</p>
+
+<p>
+ <code>num</code> must be a positive integer.
+The random integers are selected from the range 0 up to and including <code>num-1</code>
+but <u>not</u> including <code>num</code>.
+</p>
+
+
+<p>
+For example, 
+</p>
+
+<pre>
+int val = rand.nextInt(6);
+</pre>
+
+<p>
+might return 0, 1, 2, 3, 4, or 5.
+</p>
+
+</div>
+
+
+
+<br class="clearfloats"> 
+</div>
+
+<!-- QUESTION DIVISION -->
+<div class="question">
+<h3> QUESTION 5:</h3>
+<p>
+Say that you want pseudorandom numbers selected from the range 1 through 6.
+</p>
+
+<p>
+How can <code>nextInt( int num )</code> be used for that?
+</p>
+
+     <div class="navigation">
+     <a href="ch20_4.html"><img src="../backIcon.gif" alt="go to previous page"></a> &nbsp; 
+     <a href="nolink"><img src="../homeIcon.gif" alt="go to home page"></a> &nbsp;
+     <a href="ch20_6.html"><img src="../nextIcon.gif" alt="go to next page"></a>
+     </div>
+</div>
+
+</body>
+</html>
