@@ -1,0 +1,240 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<!-- 05/11/03 format changes -->
+
+<html>
+<head>
+<meta name="copyright" content="2002,  Bradley Kjell">
+<meta name="author" content="Bradley Kjell kjell at ieee dot org ">
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" type="text/css" href="../ExerciseStyle.css" />
+<title>Fill in the Blanks</title>
+</head>
+
+<body>
+<p><small>creation: 08/03/99</small> </p>
+<hr>
+<center>
+  <h1> Fill in the Blanks </h1>
+</center> 
+
+<p>
+<b>Instructions:</b> &nbsp;
+This is an ungraded fill-in-the-blank exercise.
+Each question consists of a sentence with one or two words left out.
+A button represents the missing word(s).
+For each question,
+think of the word or phrase that should fill each blank,
+then click on the buttons to see if you are correct.
+No grade is calculated for this exercise. 
+</p>
+<hr>
+
+<form>
+<input type="hidden" name="firstVal" value="false">
+<input type="hidden" name="secondVal" value="false">
+<p>
+<b>1.</b> Select a True or False for each set of radio buttons, then click on the "?"
+button to see what the AND of the two boolean values is.
+</p>
+
+<center> 
+<table>
+<tr>
+<td>
+<input type="radio" 
+value="true"                    
+name="radio1" 
+onClick="firstVal.value='true'; button3.value='   ?   '"> True<br>
+<input type="radio" 
+value="false"                    
+name="radio1" 
+checked
+onClick="firstVal.value='false'; button3.value='   ?   '"> False
+</td>
+<td>&nbsp; AND &nbsp;</td>
+<td>
+<input type="radio" 
+value="true"                    
+name="radio2" 
+onClick="secondVal.value='true'; button3.value='   ?   '"> True<br>
+<input type="radio" 
+value="false"                    
+name="radio2" 
+checked
+onClick="secondVal.value='false'; button3.value='   ?   '"> False
+</td>
+<td> &nbsp; &nbsp; equals  &nbsp; &nbsp; </td>
+<td>
+<input type="button" 
+value="    ?    "                    
+name="button3" 
+onClick="if ( firstVal.value == 'true' &&  secondVal.value == 'true') button3.value ='true'; else button3.value ='false'"> 
+</td></tr>
+</table>
+</center> 
+</form>
+<br>
+
+<form>
+<input type="hidden" name="firstVal" value="false">
+<input type="hidden" name="secondVal" value="false">
+<p>
+<b>2.</b> Select a True or False for each set of radio buttons, then click on the "?"
+button to see what the OR of the two boolean values is.
+</p> 
+
+<center> 
+<table>
+<tr>
+<td>
+<input type="radio" 
+value="true"                    
+name="radio1" 
+onClick="firstVal.value='true'; button3.value='   ?   '"> True<br>
+<input type="radio" 
+value="false"                    
+name="radio1" 
+checked
+onClick="firstVal.value='false'; button3.value='   ?   '"> False
+</td>
+<td>&nbsp; OR &nbsp;</td>
+<td>
+<input type="radio" 
+value="true"                    
+name="radio2" 
+onClick="secondVal.value='true'; button3.value='   ?   '"> True<br>
+<input type="radio" 
+value="false"                    
+name="radio2" 
+checked
+onClick="secondVal.value='false'; button3.value='   ?   '"> False
+</td>
+<td> &nbsp; &nbsp; equals  &nbsp; &nbsp; </td>
+<td>
+<input type="button" 
+value="    ?    "                    
+name="button3" 
+onClick="if ( firstVal.value == 'true' ||  secondVal.value == 'true') button3.value ='true'; else button3.value ='false'"> 
+</td></tr>
+</table>
+</center> 
+</form>
+<br>
+<hr>
+
+<form>
+<p>
+<b>3.</b> &nbsp;In Java, the AND operation is requested using the operator
+<input type="button" 
+value="_____"                    
+name="button1" 
+onClick="button1.value=' && '"> 
+</p>
+</form>
+<br>
+
+<form>
+<p>
+<b>4.</b> &nbsp;In Java, the OR operation is requested using the operator
+<input type="button" 
+value="_____"                    
+name="button1" 
+onClick="button1.value='  ||  '"> 
+</p>
+
+</form>
+<br>
+
+<form>
+<p>
+<b>5.</b> &nbsp;Arithmetic operators (like <code>*, +, -, /</code>) have
+<input type="button" 
+value="_________"                    
+name="button1" 
+onClick="button1.value='higher'">
+  precedence than other operators (like <code>&lt; , &gt;, &gt;=, &amp;&amp;, ||</code> ), so arithmetic 
+  is done 
+  <input type="button" 
+value=" _______ "                    
+name="button2" 
+onClick="button2.value='first'"> .
+</p>
+</form>
+<br>
+
+<form>
+<p>
+<b>6.</b> &nbsp; Relational operators (like <code>&lt; , &gt;, &gt;=,</code> ) have
+<input type="button" 
+value="_________"                    
+name="button1" 
+onClick="button1.value='higher'"> 
+precedence than logical operators (like <code>&amp;&amp;, ||</code> ),
+so comparing numbers is done
+<input type="button" 
+value=" __________ "                    
+name="button2" 
+onClick="button2.value='next'"> .
+Since they have the lowest precedence the logical operators act
+<input type="button" 
+value=" _______ "                    
+name="button3" 
+onClick="button3.value='last'"> .
+</p>
+</form>
+<br>
+<hr>
+
+<form>
+<p>
+<b>7.</b> &nbsp; <code>1+2 &gt; 4-2 &amp;&amp; 12 &lt; 23 </code>&nbsp; &nbsp; evaluates to  &nbsp;
+<input type="button" 
+value="  true/ false  "                    
+name="button1" 
+onClick="button1.value='  true  '"> .
+</p>
+</form>
+<br>
+
+<form>
+<p>
+<b>8.</b> &nbsp; <code>1+2 &gt; 4-2 || 12 &lt; 23</code> &nbsp; &nbsp; evaluates to  &nbsp;
+<input type="button" 
+value="  true/ false  "                    
+name="button1" 
+onClick="button1.value='  true  '"> .
+</p>
+</form>
+<br>
+
+<form>
+<p>
+<b>9.</b> &nbsp; <code>1+2 &gt; 4-2 &amp;&amp; 12 &gt; 23</code> &nbsp; &nbsp; evaluates to  &nbsp;
+<input type="button" 
+value="  true/ false  "                    
+name="button1" 
+onClick="button1.value='  false  '"> .
+</p>
+</form>
+<br>
+
+<form>
+<p>
+<b>10.</b> &nbsp; <code>1+2 &gt; 4-2 || 12 &gt; 23</code> &nbsp; &nbsp; evaluates to  &nbsp;
+<input type="button" 
+value="  true/ false  "                    
+name="button1" 
+onClick="button1.value='  true '"> .
+</p>
+</form>
+<br>
+
+<hr>
+<p>
+End of the Exercise.  If you want to do it again, click on "Refresh" in your
+browser window.
+<A HREF="../../cs151java.html#14">Click here </A> to go back to the main menu.
+</p>
+</body>
+</html>
