@@ -1,0 +1,78 @@
+
+<!doctype html> 
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<meta name="robots" content="index,follow">
+<title>Main Loop</title>
+<link rel="stylesheet" href=../CAIstyleRev2.css>
+
+</head>
+
+<body>
+
+
+<!-- ANSWER DIVISION -->
+
+<div class="answer">
+     <div class="topnavigation">
+    
+     </div>
+<h3>Answer:</h3>
+<p>
+Only one player will win. 
+Each round always adds one point to just one player,
+so just one player will be the first to reach ten points
+</p>
+
+
+<br class="clearfloats"> 
+</div>
+
+<!-- LESSON DIVISION -->
+<div class="lesson"  onclick='doHighlight()'>
+<h1>Main Loop</h1>
+<p>
+Here is the logic that implements the main loop:
+</p>
+
+<pre class="program">
+  <span class="green">// Declare and Initialize</span>
+  final int endScore=10;
+
+  int playerScore=0, compScore=0;
+  
+  <span class="green">// Play Rounds until one player reaches ending score</span>
+  while ( playerScore&lt;endScore &amp;&amp; compScore&lt;endScore )
+  {
+    . . . .
+  }
+    
+</pre>
+
+<p>
+The body of the loop corresponds to one round of the game.
+</p>
+
+
+
+<br class="clearfloats"> 
+</div>
+
+<!-- QUESTION DIVISION -->
+<div class="question">
+<h3> QUESTION 20:</h3>
+<p>
+(Review: ) What does <code>final int endScore=10;</code> do?
+</p>
+
+     <div class="navigation">
+     <a href="ch20_19.html"><img src="../backIcon.gif" alt="go to previous page"></a> &nbsp; 
+     <a href="../../index.html#20"><img src="../homeIcon.gif" alt="go to home page"></a> &nbsp;
+     <a href="ch20_21.html"><img src="../nextIcon.gif" alt="go to next page"></a>
+     </div>
+</div>
+
+</body>
+</html>

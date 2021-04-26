@@ -1,0 +1,135 @@
+
+<!doctype html> 
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<meta name="robots" content="index,follow">
+<title>Password Program</title>
+<link rel="stylesheet" href=../CAIstyleRev2.css>
+
+</head>
+
+<body>
+
+
+<!-- ANSWER DIVISION -->
+
+<div class="answer">
+     <div class="topnavigation">
+     
+     </div>
+<h3>Answer:</h3>
+<p>
+secret
+</p>
+
+<p>
+No... actually that is not such a great password.
+A password cracker would guess it in about two seconds.
+</p>
+
+
+
+<br class="clearfloats"> 
+</div>
+
+<!-- LESSON DIVISION -->
+<div class="lesson"  onclick='doHighlight()'>
+<h1>Password Program</h1>
+
+<a id="password_picking_program"></a>
+
+<p>
+Here is a program for generating random passwords:
+</p>
+
+<pre class="program">
+import java.util.*;
+
+class PasswordGenerator
+{
+  public static void main ( String[] args )
+  {
+    Scanner scan = new Scanner( System.in );
+    Random rand = new Random();    
+    int digits = 0;
+    
+    while ( digits &lt; 5 )
+    {
+      System.out.println("Your password must have at least 5 characters.");
+      System.out.print("How many characters do you want in your password? ");
+      digits = scan.nextInt();
+    }
+
+    String choices = "abcdefghijklmnopqrstuvwxyz" ;
+    choices = choices + choices.toUpperCase() ;
+    choices = choices + "1234567890" ;
+
+    String password = "";
+    int j = 0;
+    while ( j&lt;digits )
+    {
+      password = password + choices.charAt( rand.nextInt( choices.length() ) );
+      j = j + 1;
+    }
+    
+    System.out.println("Here is your password: " + password );
+  }
+}
+</pre>
+
+<p>
+Here are a few runs of the program:
+</p>
+
+<pre class="program">
+K:\&gt;java PasswordGenerator
+Your password must have at least 5 characters.
+How many characters do you want in your password? 4
+Your password must have at least 5 characters.
+How many characters do you want in your password? 3
+Your password must have at least 5 characters.
+How many characters do you want in your password? 8
+Here is your password: BaXpmUsA
+
+K:\&gt;java PasswordGenerator
+Your password must have at leas 5 characters.
+How many characters do you want in your password? 12
+Here is your password: ly3YFAhM8HDH
+</pre>
+
+<p>
+The details of this program are explained in the next few pages.
+</p>
+
+
+<br class="clearfloats"> 
+</div>
+
+<!-- QUESTION DIVISION -->
+<div class="question">
+<h3> QUESTION 14:</h3>
+<p>
+What is the purpose of the following loop from the program:
+</p>
+
+<pre>
+while ( digits &lt; 5 )
+{
+  System.out.println("Your password must have at least 5 characters.");
+  System.out.print("How many characters do you want in your password? ");
+  digits = scan.nextInt();
+}
+</pre>
+
+
+     <div class="navigation">
+     <a href="ch20_13.html"><img src="../backIcon.gif" alt="go to previous page"></a> &nbsp; 
+     <a href="../../index.html#20"><img src="../homeIcon.gif" alt="go to home page"></a> &nbsp;
+     <a href="ch20_15.html"><img src="../nextIcon.gif" alt="go to next page"></a>
+     </div>
+</div>
+
+</body>
+</html>
