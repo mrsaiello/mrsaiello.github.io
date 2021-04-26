@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<title>Programming Exercises</title>
+<meta name="copyright" content="2002,  Bradley Kjell">
+<meta name="author" content="Bradley Kjell kjell@ieee.org ">
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" type="text/css" href="../ExerciseStyle.css" />
+</head>
+
+<body>
+<p>
+<small>created 09/05/99; revised 06/13/00, 05/07/03</small>
+</p>
+
+<hr />
+<center><h1> 
+Chapter 31  Programming Exercises </h1></center>
+<hr />
+
+<h2>Exercise 1</h2>
+
+<p>
+Modify the <code>Car</code> class of the chapter by adding two methods:
+</p>
+
+<ul>
+<li>boolean gasHog()
+    <ul><li>evaluates to <em>true</em> 
+    if the miles per gallon is lower than 15.0.</li></ul></li>
+<li>boolean economyCar()
+    <ul><li>evaluates to <em>true</em> 
+    if the miles per gallon is higher than 30.0.</li></ul></li>
+</ul>
+
+<p>
+The constructor and the <code>calculateMPG()</code> method remain unchanged.
+Each of these new methods should use the  <code>calculateMPG()</code> to get the
+miles per gallon, not calculate it themselves.
+An <code>if-else</code> statement picks the correct boolean return value.
+</p>
+
+<p>
+Put user interaction back into the  <code>main()</code> method method so the
+user enters values for each car.
+The <code>main()</code> method uses these additional methods to write a message
+to the user if the car is a gas hog or an economy car.
+</p>
+
+<p>
+You might be tempted to make one of these common design errors:
+</p>
+
+<ol>
+<li>Saving miles per gallon in an instance variable of the object
+    along with  <code>startMiles, endMiles, </code> and <code>gallons</code>.
+    <ul><li>This almost seems logical, but is a poor design.
+            Don't keep a permanent copy of a value
+            that can be easily calculated from data.
+            The reason for this is that it adds complexity
+            to the object, but offers little advantage.</li></ul></li>
+<li>Directly calculating miles per gallon inside each of the new methods.
+    <ul><li>It is usually best to do a particular calculation in only
+            method, and to use it whenever
+            the calculation is needed.  
+            Now if there is a bug in the calculation,
+            or the calculation must be modified, 
+            there is only one place to look.</li></ul></li>
+</ol>
+
+<p>
+Here is a sample run of the program:
+</p>
+
+<pre>
+C:\&gt;java Miles
+Enter first reading:
+10000
+Enter second reading:
+10400
+Enter gallons:
+10
+
+Miles per gallon: 40
+Economy Car!
+</pre>
+
+<p>
+<a href="../../cs151java.html#31">Click here </a> to go back to the main menu.
+</p>
+
+<hr>
+
+<h2>Exercise 2</h2>
+
+<p>
+Change the constructor for the <code>Car</code> class
+so that it has only one parameter, the first reading of the
+odometer.
+The miles per gallon cannot yet be calculated.
+Now add a method to the class:
+</p>
+
+<pre>
+void fillUp( int miles, double gallons )
+</pre>
+
+<p>
+This simulates filling up the tank at a gas station:
+<code>miles</code> is the current odometer reading and
+<code>gallons</code> is the number of gallons that filled the tank.
+Save these values in instance variables.
+With this information, miles per gallon can be calculated.
+Write the method so that it 
+updates the instance variables each time it is called
+(simulating another visit to the pumps).
+After each call <code>calculateMPG()</code> will
+calculate the latest miles per gallon.
+</p>
+
+<p>
+Write a testing class with a <nobr><code>main()</code>/nobr>
+that constructs a car and calls <nobr><code>fillUp()</code></nobr>
+and <nobr><code>calculateMPG()</code></nobr> a few times.
+</p>
+
+<pre>
+C:\&gt;java MilesPerGallon
+New car odometer reading:
+00000
+
+Filling Station Visit
+odometer reading
+00350
+gallons to fill tank
+10
+Miles per gallon: 35
+Economy Car!
+
+Filling Station Visit
+odometer reading
+00450
+gallons to fill tank
+10
+Miles per gallon:    10
+Gas Hog!
+</pre>
+
+<p>
+<a href="../../cs151java.html#31">Click here </a> to go back to the main menu.
+</p>
+
+<hr />
+<p>
+End of the Exercises
+</p>
+<hr>
+</body>
+</html>
