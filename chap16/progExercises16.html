@@ -1,0 +1,172 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<title>Programming Exercises</title>
+<meta name="copyright" content="2002,  Bradley Kjell">
+<meta name="author" content="Bradley Kjell kjell at ieee dot org ">
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" type="text/css" href="../ExerciseStyle.css" />
+</head>
+
+<body >
+
+<p>
+<small>created 08/04/99</small>
+</p>
+
+<hr />
+<center>
+<h1>
+<span class="blue"> 
+Chapter 16  Programming Exercises
+</span>
+</h1>
+</center>
+
+<hr />
+
+<h2>Exercise 1 --- Adding up Integers</h2>
+<p>
+Write a program that adds up integers that the user enters.
+First the programs asks 
+how many numbers will be added up.
+Then the program prompts the user for each number.
+Finally it prints the sum.
+</p>
+
+
+<pre>
+How many integers will be added:
+5
+Enter an integer:
+3
+Enter an integer:
+4
+Enter an integer:
+-4
+Enter an integer:
+-3
+Enter an integer:
+7
+
+The sum is 7
+</pre>
+
+<p>
+Be careful not to add the number of integers (in the example, 5)
+into the sum.
+</p>
+
+<p>
+<a href="../../cs151java.html#16">Click here </a> to go back to the main menu.
+</p>
+
+<hr>
+<h2>Exercise 2</h2>
+<p>
+Write a program that computes the following sum:
+</p>
+
+
+<pre>
+sum = 1.0/1 + 1.0/2 + 1.0/3 + 1.0/4 + 1.0/5 + .... + 1.0/N
+</pre>
+
+<p>
+N is an integer limit that the user enters.
+</p>
+
+<pre>
+Enter N
+4
+
+Sum is: 2.08333333333
+</pre>
+
+<p>
+<a href="../../cs151java.html#16">Click here </a> to go back to the main menu.
+</p>
+
+<hr>
+<h2>Exercise 3</h2>
+<p>
+Write a program that computes the standard deviation of a set of 
+floating point numbers
+that the user enters.
+First the user says how many numbers N are to follow.
+Then the program  asks for and reads in each floating point number.
+Finally it  writes out the standard deviation.
+The standard deviation of a set of numbers X<sub>i</sub> is:
+</p>
+
+<pre>
+SD = Math.sqrt( avgSquare - avg<sup>2</sup> )
+</pre>
+
+
+<p>
+Here, <code>avg</code> is the average of the N numbers, and
+<code>avg<sup>2</sup></code> is its square.
+</p>
+
+<p>
+<code>avgSquare</code> is the average of X<sub>i</sub> * X<sub>i</sub>.
+In other words,
+this is the average of the squared value of each floating point number.
+</p>
+
+<p>
+For example, if N = 4, say the numbers were:
+</p>
+
+
+<table border="border" width="35%" bordercolor="blue">
+<tr>
+<td>
+
+<table style="margin-left:0cm;" width="100%" 
+ bgcolor="white" cellpadding="10">
+<tr align="center"><th> &nbsp;</th><th>X<sub>i</sub></th> <th>X<sub>i</sub> * X<sub>i</sub></th></tr>
+<tr align="center"><td> &nbsp;</td><td> 2.0 </td> <td> 4.0</td></tr>
+<tr align="center"><td> &nbsp;</td><td> 3.0 </td> <td> 9.0</td></tr>
+<tr align="center"><td> &nbsp;</td><td> 1.0 </td> <td> 1.0</td></tr>
+<tr align="center"><td> &nbsp;</td><td> 2.0 </td> <td> 4.0</td></tr>
+<tr align="center"><td> &nbsp;</td><td><hr /></td> <td><hr /></td></tr>
+<tr align="center"><td> sum </td><td> 8.0 </td> <td> 18.0</td></tr>
+</table>
+
+</td>
+</tr>
+</table>
+
+<p>
+Now:
+</p>
+
+<pre>
+avg = 8.0/4 = 2.0
+avg<sup>2</sup> = 4.0
+
+avgSquare = 18.0/4 = 4.5
+
+SD = Math.sqrt( 4.5 - 4.0 ) = Math.sqrt( .5 ) = 0.7071067812
+</pre>
+
+<p>
+To do this you will need to do several things inside the loop body for
+each floating point value as it comes in:
+add it to a sum, square it and add it to a sum of squares.
+Then after the loop is finished apply the formula.
+</p>
+
+<p>
+<a href="../../cs151java.html#16">Click here </a> to go back to the main menu.
+</p>
+
+<hr/>
+
+<p>
+End of exercises.
+</p>
+</body>
+</html>
