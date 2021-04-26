@@ -1,0 +1,232 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<title>Programming Exercises</title>
+<meta name="copyright" content="2002,  Bradley Kjell">
+<meta name="author" content="Bradley Kjell kjell@ieee.org ">
+<meta name="robots" content="noindex,nofollow">
+<link rel="stylesheet" type="text/css" href="../ExerciseStyle.css" />
+</head>
+
+<body>
+<p>
+<small>created 08/09/99</small>
+</p>
+
+<hr>
+<center><h1><span class="blue"> 
+Chapter 19  Programming Exercises</span></h1></center>
+
+<!-- ----------------------------------------------------------------------------------  -->
+<!-- ----------------------------------------------------------------------------------  -->
+<br>
+<h2>Exercise 1 ---  Credit Card Bill</h2>
+<p>
+Say that you owe the credit card company
+$1000.00.
+The company charges you 1.5% per month on the unpaid balance.
+You have decided to stop using the card and to pay off the
+debt by making a monthly payment of N dollars a month.
+Write a program that asks for the monthy payment,
+then writes out the balance and total payments so far
+for every succeeding month
+until the balance is zero or less.
+</p>
+
+<pre>
+Enter the monthly payment:
+100
+Month: 1        balance: 915.0  total payments: 100.0
+Month: 2        balance: 828.725        total payments: 200.0
+Month: 3        balance: 741.155875     total payments: 300.0
+Month: 4        balance: 652.273213125  total payments: 400.0
+Month: 5        balance: 562.057311321875       total payments: 500.0
+Month: 6        balance: 470.4881709917031      total payments: 600.0
+Month: 7        balance: 377.54549355657866     total payments: 700.0
+Month: 8        balance: 283.20867595992735     total payments: 800.0
+Month: 9        balance: 187.4568060993263      total payments: 900.0
+Month: 10       balance: 90.26865819081618      total payments: 1000.0
+Month: 11       balance: -8.377311936321576     total payments: 1100.0
+</pre>
+
+<p>
+For each month, calculate the interest due on the unpaid balance.
+Then calculate the new balance by adding the interest and subtracting
+the payment.
+</p>
+
+<p>
+<b>Improved Program:</b> &nbsp; &nbsp; Have the program prompt for the
+beginning balance, the monthly interest, and the payment amount.
+Also, when the balance falls below the amount of the monthly payment,
+write out the final payment that will bring the balance to exactly zero.
+</p>
+
+<A HREF="../../cs151java.html#19">Click here </A> to go back to the main menu.
+<hr>
+<!-- ----------------------------------------------------------------------------------  -->
+<!-- ----------------------------------------------------------------------------------  -->
+
+
+<!-- ----------------------------------------------------------------------------------  -->
+<!-- ----------------------------------------------------------------------------------  -->
+<br>
+<h2>Exercise 2 --- Drug Potency</h2>
+<p>
+A certain drug looses 4% of its effectiveness every month it is in storage.
+When its effectiveness is below 50% it is considered expired and must be discarded.
+Write a program that determines how many months the drug can remain in storage.
+</p>
+
+<pre>
+month: 0        effectiveness: 100.0
+month: 1        effectiveness: 96.0
+month: 2        effectiveness: 92.16
+month: 3        effectiveness: 88.47359999999999
+month: 4        effectiveness: 84.93465599999999
+month: 5        effectiveness: 81.53726975999999
+month: 6        effectiveness: 78.27577896959998
+month: 7        effectiveness: 75.14474781081599
+month: 8        effectiveness: 72.13895789838334
+month: 9        effectiveness: 69.253399582448
+month: 10       effectiveness: 66.48326359915008
+month: 11       effectiveness: 63.82393305518407
+month: 12       effectiveness: 61.27097573297671
+month: 13       effectiveness: 58.82013670365764
+month: 14       effectiveness: 56.46733123551133
+month: 15       effectiveness: 54.20863798609088
+month: 16       effectiveness: 52.04029246664724
+month: 17       effectiveness: 49.95868076798135 DISCARDED
+</pre>
+
+
+<A HREF="../../cs151java.html#19">Click here </A> to go back to the main menu.
+<hr>
+
+<!-- ----------------------------------------------------------------------------------  -->
+<br>
+<h2>Exercise 3 --- e<sup><big>x</big></sup></h2>
+<p>
+One of the more amazing facts from calculus is that the following
+sum gets closer and closer to the value e<sup><big>x</big></sup>
+the more terms you add in:
+</p>
+
+<blockquote>
+<code>
+e<sup><big>x</big></sup> = 1 + x + x<sup><big>2</big></sup>/2! + 
+ x<sup><big>3</big></sup>/3! + 
+ x<sup><big>4</big></sup>/4! +
+ x<sup><big>5</big></sup>/5! + 
+ x<sup><big>6</big></sup>/6! + . . . .
+</code>
+</blockquote>
+
+<p>
+Remember that <code>n<big>!</big></code> means <code>n</code> factorial,
+<code>n*(n-1)*(n-2)* ... *1.</code>
+For example, if x is 2 then
+</p>
+
+<blockquote>
+e<sup>2</sup> = 1 + 2 + 2<sup>2</sup>/2! + 
+ 2<sup>3</sup>/3! + 
+ 2<sup>4</sup>/4! + 
+ 2<sup>5</sup>/5!  . . . .
+</blockquote>
+
+<blockquote>
+e<sup>2</sup> = 1 + 2 + 4/2 + 8/6 + 16/24 + 32/120 + . . . .<br><br>
+e<sup>2</sup> = 1 + 2 +  2  + 1.3333 + 0.6666 + 0.2666 + . . . .<br><br>
+e<sup>2</sup> ~ 7.266<br><br>
+</blockquote>
+
+<p>
+More exactly, e<sup>2</sup> = 7.38907...
+</p>
+
+<p>
+Write a program that 
+asks the user to enter <code>x</code>,
+then calculates <code>e<sup>x</sup></code>
+using a loop to add up successive terms until the
+current term is less than 1.0E-12.
+Then write out the value <code>Math.exp(x)</code> to see how your value compares.
+</p>
+
+<p>
+To do this program sensibly,
+the loop will add in a <code>term</code> each iteration.
+</p>
+
+<blockquote>
+ sum = sum + term;
+</blockquote>
+
+<p>
+Look carefully at the first equation for  e<sup>x</sup>.
+Notice that each term is:
+</p>
+
+<blockquote>
+ x<sup> N</sup>/N! 
+</blockquote>
+
+<p>
+for some N.  This is the same as:
+</p>
+
+<blockquote>
+ x<sup>(N-1)</font></sup>/(N-1)! &nbsp; * &nbsp; x/N
+</blockquote>
+
+<p>
+This is the same as the <u>previous term</u> times x/N.
+So each iteration of the loop merely
+has to multiply the previous term by x/N and add it to
+the accumulating sum.
+</p>
+
+<p>
+Don't let the math scare you away!
+This is actually a fairly easy program,
+and is typical of a type of calculation that computers are often used for.
+</p>
+
+<pre>
+Enter x:
+2
+n:1     term: 2.0               sum: 3.0
+n:2     term: 2.0               sum: 5.0
+n:3     term: 1.3333333333333333                sum: 6.333333333333333
+n:4     term: 0.6666666666666666                sum: 7.0
+n:5     term: 0.26666666666666666               sum: 7.266666666666667
+n:6     term: 0.08888888888888889               sum: 7.355555555555555
+n:7     term: 0.025396825396825397              sum: 7.3809523809523805
+n:8     term: 0.006349206349206349              sum: 7.387301587301587
+n:9     term: 0.0014109347442680777             sum: 7.3887125220458545
+n:10    term: 2.8218694885361555E-4             sum: 7.388994708994708
+n:11    term: 5.130671797338464E-5              sum: 7.389046015712681
+n:12    term: 8.551119662230774E-6              sum: 7.3890545668323435
+n:13    term: 1.3155568711124268E-6             sum: 7.389055882389215
+n:14    term: 1.8793669587320383E-7             sum: 7.3890560703259105
+n:15    term: 2.5058226116427178E-8             sum: 7.389056095384136
+n:16    term: 3.1322782645533972E-9             sum: 7.389056098516415
+n:17    term: 3.6850332524157613E-10            sum: 7.389056098884918
+n:18    term: 4.094481391573068E-11             sum: 7.389056098925863
+n:19    term: 4.309980412182177E-12             sum: 7.3890560989301735
+n:20    term: 4.309980412182177E-13             sum: 7.389056098930604
+
+my   e^x: 7.389056098930604
+real e^x: 7.38905609893065
+</pre>
+
+<A HREF="../../cs151java.html#19">Click here </A> to go back to the main menu.
+<hr>
+<!-- ----------------------------------------------------------------------------------  -->
+<!-- ----------------------------------------------------------------------------------  -->
+<center><b>
+End of exercises.</center></b>
+</p>
+</body>
+</html>
