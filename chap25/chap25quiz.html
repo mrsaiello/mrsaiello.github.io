@@ -1,0 +1,526 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN"/>
+<html>
+<head>
+<meta name="copyright" content="2003" />
+<meta name="author" content="B. P. Kjell" />
+<meta name="email" content="kjell@ieee.org" />
+<meta name="robots" content="noindex,nofollow" />
+<title>
+Quiz on Objects
+</title>
+<link rel="stylesheet" type="text/css" href="../QUIZstyle.css" />
+
+<script language="JavaScript">
+function gradeQuiz( reportForm ) 
+{
+  var totalRight = 0;
+
+  for ( var count=0; count < document.forms.length-1; count++ )
+  {
+    if ( document.forms[ count ].response.value == document.forms[ count ].answer.value  )
+      totalRight++ ;
+    document.forms[ count ].correct.value=document.forms[ count ].answer.value 
+  }
+  reportForm.grade.value   = " " + totalRight
+  percent                  = (100*totalRight)/(document.forms.length-1)
+  reportForm.percent.value = " " + percent
+  if ( percent > 90 )
+    reportForm.letter.value = "A"
+  else if ( percent > 80 )
+    reportForm.letter.value = "B"
+  else if ( percent > 70 )
+    reportForm.letter.value = "C"
+  else if ( percent > 60 )
+    reportForm.letter.value = "D"
+  else
+    reportForm.letter.value = "hmm.."
+
+}
+</script>
+</head>
+<body>
+<p><small>revised: 10/04/03</small></p>
+<hr/><center><h1>
+<img src="quizBalls.gif" align=left vspace=15 hspace=15 >
+Quiz on Objects
+</h1></center>
+<p>
+This is a practice quiz.
+The results are not recorded anywhere and do not affect your grade.
+The questions on this quiz might not appear 
+in any quiz or test that does count toward your grade.
+</p>
+
+<p>
+<b>Instructions:</b> 
+For each question,
+choose the single best answer.
+Make your choice by clicking on its button.
+You can change your answers at any time.
+When the quiz is graded, the correct answers will appear in the box after each question.
+</p>
+<br clear="all"/>
+
+
+<hr/>
+<form name="question1">
+<p>
+1.
+
+What attributes do all real world objects have? 
+
+</p>
+<table>
+<tr><td><input type="radio" name="questradio" value="" onClick="question1.response.value='A'">
+<b>A.&nbsp;&nbsp;&nbsp;</b>
+ 
+Objects have identity, state, and behavior. 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question1.response.value='B'">
+<b>B.&nbsp;&nbsp;&nbsp;</b>
+ 
+Objects have  state and behavior. 
+
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question1.response.value='C'">
+<b>C.&nbsp;&nbsp;&nbsp;</b>
+ 
+Objects have size and weight. 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question1.response.value='D'">
+<b>D.&nbsp;&nbsp;&nbsp;</b>
+ 
+Objects have existence. 
+
+</tr></td>
+
+</table>
+<input type="hidden" name="answer" value="A">
+<input type="text" name="correct" value="  " size="5">
+<input type="hidden" name="response" value="" >
+</form>
+
+<hr/>
+<form name="question2">
+<p>
+2.
+
+What attributes do all <em>Software</em> objects have? 
+
+</p>
+<table>
+<tr><td><input type="radio" name="questradio" value="" onClick="question2.response.value='A'">
+<b>A.&nbsp;&nbsp;&nbsp;</b>
+ 
+Software objects have  RAM, ROM, and processors.
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question2.response.value='B'">
+<b>B.&nbsp;&nbsp;&nbsp;</b>
+ 
+Software objects have identity, state, and behavior. 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question2.response.value='C'">
+<b>C.&nbsp;&nbsp;&nbsp;</b>
+ 
+Software objects have variables and storage. 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question2.response.value='D'">
+<b>D.&nbsp;&nbsp;&nbsp;</b>
+ 
+Software objects are made of computer components. 
+
+</tr></td>
+
+</table>
+<input type="hidden" name="answer" value="B">
+<input type="text" name="correct" value="  " size="5">
+<input type="hidden" name="response" value="" >
+</form>
+
+<hr/>
+<form name="question3">
+<p>
+3.
+
+What is the defining characteristic of  a von Neumann computer?
+
+</p>
+<table>
+<tr><td><input type="radio" name="questradio" value="" onClick="question3.response.value='A'">
+<b>A.&nbsp;&nbsp;&nbsp;</b>
+ 
+RAM is used for data and ROM is used for programs. 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question3.response.value='B'">
+<b>B.&nbsp;&nbsp;&nbsp;</b>
+ 
+It has both a processor chip and memory.
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question3.response.value='C'">
+<b>C.&nbsp;&nbsp;&nbsp;</b>
+ 
+General purpose memory is used to store both programs and data. 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question3.response.value='D'">
+<b>D.&nbsp;&nbsp;&nbsp;</b>
+ 
+It uses general purpose registers for arithmetic. 
+
+</tr></td>
+
+</table>
+<input type="hidden" name="answer" value="C">
+<input type="text" name="correct" value="  " size="5">
+<input type="hidden" name="response" value="" >
+</form>
+
+<hr/>
+<form name="question4">
+<p>
+4.
+
+When you  run a Java application by typing <em>java someClass</em>
+what is the first method that starts? 
+
+</p>
+<table>
+<tr><td><input type="radio" name="questradio" value="" onClick="question4.response.value='A'">
+<b>A.&nbsp;&nbsp;&nbsp;</b>
+ 
+The <em>main()</em> method of <em>someClass</em>.  
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question4.response.value='B'">
+<b>B.&nbsp;&nbsp;&nbsp;</b>
+ 
+The <em>run()</em> method <em>someClass</em>.
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question4.response.value='C'">
+<b>C.&nbsp;&nbsp;&nbsp;</b>
+ 
+The <em>someClass</em> method.
+
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question4.response.value='D'">
+<b>D.&nbsp;&nbsp;&nbsp;</b>
+ 
+The applet method. 
+
+</tr></td>
+
+</table>
+<input type="hidden" name="answer" value="A">
+<input type="text" name="correct" value="  " size="5">
+<input type="hidden" name="response" value="" >
+</form>
+
+<hr/>
+<form name="question5">
+<p>
+5.
+
+What is a class? 
+
+</p>
+<table>
+<tr><td><input type="radio" name="questradio" value="" onClick="question5.response.value='A'">
+<b>A.&nbsp;&nbsp;&nbsp;</b>
+ 
+A class is a section of computer memory containing objects. 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question5.response.value='B'">
+<b>B.&nbsp;&nbsp;&nbsp;</b>
+ 
+A class is a section of the hard disk reserved for object oriented programs.
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question5.response.value='C'">
+<b>C.&nbsp;&nbsp;&nbsp;</b>
+ 
+A class is the part of an object that contains the variables. 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question5.response.value='D'">
+<b>D.&nbsp;&nbsp;&nbsp;</b>
+ 
+A class is a description of a kind of object. 
+
+</tr></td>
+
+</table>
+<input type="hidden" name="answer" value="D">
+<input type="text" name="correct" value="  " size="5">
+<input type="hidden" name="response" value="" >
+</form>
+
+<hr/>
+<form name="question6">
+<p>
+6.
+
+What is another name for creating an object? 
+
+</p>
+<table>
+<tr><td><input type="radio" name="questradio" value="" onClick="question6.response.value='A'">
+<b>A.&nbsp;&nbsp;&nbsp;</b>
+ 
+instantiation 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question6.response.value='B'">
+<b>B.&nbsp;&nbsp;&nbsp;</b>
+ 
+insubordination
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question6.response.value='C'">
+<b>C.&nbsp;&nbsp;&nbsp;</b>
+ 
+initialization 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question6.response.value='D'">
+<b>D.&nbsp;&nbsp;&nbsp;</b>
+ 
+inheritance 
+
+</tr></td>
+
+</table>
+<input type="hidden" name="answer" value="A">
+<input type="text" name="correct" value="  " size="5">
+<input type="hidden" name="response" value="" >
+</form>
+
+<hr/>
+<form name="question7">
+<p>
+7.
+
+What are the <em>static</em> variables and methods of a class? 
+
+</p>
+<table>
+<tr><td><input type="radio" name="questradio" value="" onClick="question7.response.value='A'">
+<b>A.&nbsp;&nbsp;&nbsp;</b>
+ 
+Variables and methods that form the foundation of each object of that class. 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question7.response.value='B'">
+<b>B.&nbsp;&nbsp;&nbsp;</b>
+ 
+Variables and methods that belong to all objects in the computer system.
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question7.response.value='C'">
+<b>C.&nbsp;&nbsp;&nbsp;</b>
+ 
+Variables and methods that belong only the objects of that class.
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question7.response.value='D'">
+<b>D.&nbsp;&nbsp;&nbsp;</b>
+ 
+Variables and methods that are part of the class definition, but not of its objects.
+
+</tr></td>
+
+</table>
+<input type="hidden" name="answer" value="D">
+<input type="text" name="correct" value="  " size="5">
+<input type="hidden" name="response" value="" >
+</form>
+
+<hr/>
+<form name="question8">
+<p>
+8.
+
+Which of the following invokes the method <em>length()</em> of the
+object <em>str</em> and stores the result in <em>val</em>? 
+
+</p>
+<table>
+<tr><td><input type="radio" name="questradio" value="" onClick="question8.response.value='A'">
+<b>A.&nbsp;&nbsp;&nbsp;</b>
+ 
+val = str.length() ;
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question8.response.value='B'">
+<b>B.&nbsp;&nbsp;&nbsp;</b>
+ 
+val = length.str() ;
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question8.response.value='C'">
+<b>C.&nbsp;&nbsp;&nbsp;</b>
+ 
+val = length().str ;
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question8.response.value='D'">
+<b>D.&nbsp;&nbsp;&nbsp;</b>
+ 
+val = length( str ) ;
+
+</tr></td>
+
+</table>
+<input type="hidden" name="answer" value="A">
+<input type="text" name="correct" value="  " size="5">
+<input type="hidden" name="response" value="" >
+</form>
+
+<hr/>
+<form name="question9">
+<p>
+9.
+
+How many objects of a given class may be constructed in an application? 
+
+</p>
+<table>
+<tr><td><input type="radio" name="questradio" value="" onClick="question9.response.value='A'">
+<b>A.&nbsp;&nbsp;&nbsp;</b>
+ 
+Only one per constructor. 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question9.response.value='B'">
+<b>B.&nbsp;&nbsp;&nbsp;</b>
+ 
+As many as the application asks for.
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question9.response.value='C'">
+<b>C.&nbsp;&nbsp;&nbsp;</b>
+ 
+Only one per class. 
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question9.response.value='D'">
+<b>D.&nbsp;&nbsp;&nbsp;</b>
+ 
+One object per variable. 
+
+</tr></td>
+
+</table>
+<input type="hidden" name="answer" value="B">
+<input type="text" name="correct" value="  " size="5">
+<input type="hidden" name="response" value="" >
+</form>
+
+<hr/>
+<form name="question10">
+<p>
+10.
+
+Which of the following is correct?
+
+</p>
+<table>
+<tr><td><input type="radio" name="questradio" value="" onClick="question10.response.value='A'">
+<b>A.&nbsp;&nbsp;&nbsp;</b>
+ 
+String alpha("Hello Quiz!") ;  
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question10.response.value='B'">
+<b>B.&nbsp;&nbsp;&nbsp;</b>
+ 
+String = "Hello Quiz!" ;  
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question10.response.value='C'">
+<b>C.&nbsp;&nbsp;&nbsp;</b>
+ 
+String alpha = new "Hello Quiz!" ;
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question10.response.value='D'">
+<b>D.&nbsp;&nbsp;&nbsp;</b>
+ 
+String alpha = "Hello Quiz!" ;
+
+</tr></td>
+
+</table>
+<input type="hidden" name="answer" value="D">
+<input type="text" name="correct" value="  " size="5">
+<input type="hidden" name="response" value="" >
+</form>
+<hr/>
+<form name="evaluateQuest">
+<center>
+<input type="button" value="grade quiz" onClick="gradeQuiz(this.form)">
+</center>
+<p>
+The number you got right:
+&nbsp;&nbsp;
+<input type=text name="grade" size="5">
+&nbsp;&nbsp;
+Percent Correct:
+&nbsp;&nbsp;
+<input type=text name="percent" size="5">
+&nbsp;&nbsp;
+Letter Grade:
+&nbsp;&nbsp;
+<input type=text name="letter" size="5">
+</p>
+</form>
+<hr/>
+<a href="../../cs151java.html#25"><img src="../contents.gif"alt="Click here" align="left" hspace="10" vspace="25"> </a> <p>
+If you have returned here from another page,
+or have re-loaded this page, you will need to click again on
+each of your choices for the grading program to work correctly.
+You may want to press the SHIFT KEY while clicking to clear
+the old answers.
+</p>
+</body>
+</html>
