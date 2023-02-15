@@ -18,61 +18,84 @@
 
 <div class="answer">
 <h3>Answer:</h3>
-<p>
-Again, that depends on where you are.
-Some possible choices are
-</p>
-
 <pre>
-12,345.6789
-12.345,6789
-12 345,6789
+Num = 098,765.43
 </pre>
-
-<p>
-Some countries use a decimal point to separate the 
-integer part of a number from the
-fractional part, others use a comma.
-</p>
 
 </div>
 
 <!-- LESSON DIVISION -->
 <div class="lesson">
-<h1>Floating Point Output </h1>
+<h1>Collapsing Zeros </h1>
+
+
+<A NAME="# format character"></A>
 
 <p>
-The default locale determines how <nobr><code>DecimalFormat.format()</code></nobr>
-formats a floating point number.
-Here is a program that shows this.
+Use the character <code>#</code> in the format string 
+to show a digit that will be omitted from the output string
+if it is a leading
+or trailing zero.
 </p>
 
-<pre class="program">
-import java.text.*;
-
-class IODemoFloat
-{
-  public static void main ( String[] args )
-  {
-    double value = 12345.6789 ;    
-    DecimalFormat numform = new DecimalFormat(); 
-    System.out.println( "value = " + numform.format(value) );
-  }
-}</pre>
-
 <p>
-The output (on my computer) is:
+For integers:
+the pattern has two halves.
+It starts with any number of <code>#</code>s,
+followed by one or more <code>0</code>s.
+Here are some legal patterns:
 </p>
 
 <pre>
-value = 12,345.679
+####0 
+###00 
+##0 
+000
+###0
 </pre>
 
+<p>
+For floating point:
+The integer part of the pattern 
+follows the rules for integers.
+If a decimal point is included,
+the pattern for the fraction
+has two halves: it
+starts with any number of <code>0</code>s
+followed by any number of <code>#</code>s.
+Here are some legal patterns:
+</p>
+
+<pre>
+####0.##
+###00.##
+##0.00##
+##0.000
+000
+###0
+##0.
+</pre>
 
 <p>
-Notice that the output value has been rounded and shows three places
-to the right of the decimal.
+Here are some illegal patterns:
 </p>
+
+<pre>
+####        ---  needs to end with at least one 0
+###.##      ---  integer part needs to end with a 0
+##0.0##00   ---  bad fractional part (can't surround #s with 0s)
+##00##      ---  bad integer pattern
+###0.##0    ---  bad fractional part
+</pre>
+
+<p>
+Usually <code>format()</code> produces a reasonable string,
+even with defective format patterns.
+But seriously defective patterns cause it to throw an
+<code>IllegalArgumentException</code> at run time.
+The compiler does not inspect the format patterns.
+</p>
+
 
         <div class="clearfloats">  <!-- divs need something inside of them --> </div>
 </div> <!-- end lesson -->
@@ -81,9 +104,12 @@ to the right of the decimal.
 <div class="question">
 <h3> QUESTION 5:</h3>
 <p>
-Has the contents of the variable <code>value</code> been changed
-by <code>format()</code>?
+Is the following format string correct?
 </p>
+
+<pre>
+000.###
+</pre>
 
      <div class="navigation">
      <a href="ch24B_4.html"><img src="../backIcon.gif" alt="go to previous page" /></a> &nbsp; 
