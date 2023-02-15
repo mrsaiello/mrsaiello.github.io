@@ -10,55 +10,75 @@
 
 <body>
 
-<div class="questionEcho">
-
-</div>
 <!-- ANSWER DIVISION -->
 
 <div class="answer">
 <h3>Answer:</h3>
-<ul>
-<li>, comma</li>
-<li>. dot</li>
-<li>&nbsp; space</li>
-</ul>
+<pre>
+Num = 13.46
+</pre>
 
 <p>
-Of course, a given locale uses only one of these characters
-for this purpose.
+The complete 13 was produced, even though there was only one
+zero left of the decimal point.
+Two digits were output to the right of the decimal point,
+as requested.
+The last digit was rounded.
 </p>
+
+
+
 
 </div>
 
 <!-- LESSON DIVISION -->
 <div class="lesson">
-<h1>Integer Formatting Applet</h1>
+<h1>'0' Format Code</h1>
 
-<A NAME=""></A>
+<A NAME="0 format character"></A>
 
 <p>
-Here is an applet that formats an integer
-using <nobr><code>DecimalFormat.format()</code></nobr>.
-Enter an integer (as characters) into the text box and click on the button.
+The format pattern   <code>000.00</code> asks that a number be
+converted into 6 characters, three digits on the left of the decimal separator,
+a decimal separator,
+and two digits on the right.
+However, all the digits that make up the integer part of the number
+are output, regardless of the format pattern.
 </p>
 
-       
-<table border="1" bordercolor="brown">
-       <tr><td>Sorry this applet is no longer supported...</td></tr>
-<tr><td>
-<applet code="DFAppletDefault.class" width="300" height="150">
-</applet>
-</td></tr>
+<p>
+This table shows how some doubles are
+converted to strings (using the US locale)
+under the direction of various format patterns.
+The doubles are 64-bit patterns contained in some variable,
+but the table shows them written out as decimals.
+</p>
+
+<table border="1" bordercolor="brown" cellpadding="5">
+
+<tr><th>value of double</th> <th>format pattern</th> <th>output string</th></tr>
+
+<tr> <td><pre>123.456</pre></td> <td><pre>"000.000"</pre></td> <td><pre>"123.456"</pre></td> </tr>
+
+<tr> <td><pre>123.456</pre></td> <td><pre>"000.0"  </pre></td> <td><pre>"123.5"</pre></td></tr>
+
+<tr> <td><pre>123.456</pre></td> <td><pre>"000"    </pre></td> <td><pre>"123"</pre></td> </tr>
+
+<tr> <td><pre>89.008</pre></td> <td><pre>"000.000"  </pre></td> <td><pre>"089.008"</pre></td></tr>
+
+<tr> <td><pre>89.008</pre></td> <td><pre>"0.00"     </pre></td> <td><pre>"89.01"</pre></td></tr>
+
+<tr> <td><pre>89.008</pre></td> <td><pre>"0."       </pre></td> <td><pre>"89."</pre></td> </tr>
+
 </table>
+
 <p>
-If you enter characters that can't be converted to an <code>int</code>,
-an error message will be written.
-Incorrect character strings include those that contain  
-commas, dots, or spaces.
-The input must be unformatted.
-Other incorrect strings include those for integers that
-are too big (greater in magnitude than about two billion).
+The quote marks are not part of the output string.
+They are there to show the limits of the string.
+(Examples in pages to come show  output strings that include spaces.)
 </p>
+
+
 
 
         <div class="clearfloats">  <!-- divs need something inside of them --> </div>
@@ -66,19 +86,21 @@ are too big (greater in magnitude than about two billion).
 
 <!-- QUESTION DIVISION -->
 <div class="question">
-<h3> QUESTION 4:</h3>
+<h3> QUESTION 10:</h3>
 <p>
-How would you prefer to see this number displayed:
+What does the following code fragment write?
 </p>
 
 <pre>
-12345.6789
+DecimalFormat numform = new DecimalFormat("000,000.00"); 
+System.out.println( "Num = " + numform.format(98765.432) );
 </pre>
+
 
 
      <div class="navigation">
      <a href="ch24B_3.html"><img src="../backIcon.gif" alt="go to previous page" /></a> &nbsp; 
-     <a href="../../cs151java.html#24"><img src="../homeIcon.gif" alt="go to home page" /></a> &nbsp;
+     <a href="ch24B_1.html"><img src="../homeIcon.gif" alt="go to home page" /></a> &nbsp;
      <a href="ch24B_5.html"><img src="../nextIcon.gif" alt="go to next page" /></a>
      </p>
 </div>
