@@ -95,6 +95,16 @@ But seriously defective patterns cause it to throw an
 <code>IllegalArgumentException</code> at run time.
 The compiler does not inspect the format patterns.
 </p>
+        
+        <table border="1" bordercolor="brown" cellpadding="5">
+
+<tr><th>value of double</th> <th>format pattern</th> <th>output string</th> <th>format pattern</th> <th>output string</th></tr>
+
+<tr> <td><pre>123.456789</pre></td> <td><pre>"0000.000"</pre></td> <td><pre>"0123.457"</pre></td> <td><pre>"#.0"</pre></td> <td><pre>"123.5"</pre></td> </tr>
+
+<tr> <td><pre>12345.678</pre></td> <td><pre>"000,000"</pre></td> <td><pre>"012,346"</pre> <td><pre>"#,###"</pre> <td><pre>"12,346"</pre></td></tr>
+
+</table>
 
 
         <div class="clearfloats">  <!-- divs need something inside of them --> </div>
