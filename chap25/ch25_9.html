@@ -17,8 +17,8 @@
 <div class="answer">
 <h3>Answer:</h3>
 <p>
-Yes.  In order for a plan to be followed, it has to somehow
-exist.
+Yes.  A class definition will have <em>its own</em> variables (state),
+and will have <em>its own</em> methods (behavior.)
 </p>
 
 
@@ -26,39 +26,55 @@ exist.
 
 <!-- LESSON DIVISION -->
 <div class="lesson">
-<h1>Static</h1>
-<A NAME="static"></A>
-<p>
-Classes are mostly used to create objects,
-just as a cookie cutter is mostly used to create cookies.
-But a class has an existence,
-just as a cookie cutter has an existence.
-A class and its objects are different types of things,
-just as a cookie cutter and its cookies are different types of things.
-</p>
+        <h1>Complete Program Utilizing an Object-Oriented Programming (OOP) Setup</h1>
+<pre class="program">
+// Define the Person class
+public class Person {
+        
+    // Attributes or instance variables
+    String name;
+    int age;
+
+    // Constructor to initialize Person objects
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Method to greet the person
+    public void greet() {
+        System.out.println("Hello, my name is " + name + " and I am " + age + " years old.");
+    }
+}
+
+// Main class to demonstrate the usage of Person objects
+public class Main {
+    public static void main(String[] args) {
+        
+        // Creating objects of the Person class using the constructor
+        Person person1 = new Person("John", 25);
+        Person person2 = new Person("Alice", 30);
+
+        // Accessing object attributes and calling methods
+        person1.greet(); // Output: Hello, my name is John and I am 25 years old.
+        person2.greet(); // Output: Hello, my name is Alice and I am 30 years old.
+    }
+}
+</pre>
+
+       <p><strong>Explanation:</strong>
 
 <p>
-A cookie cutter has characteristics that are not shared with cookies.
-For example, a cookie cutter is made of steel and has sharp edges.
-After a cookie cutter has been used for a while,
-there will be many cookies (soft, rounded, doughy things) but
-only one thing made of steel with sharp edges.
-</p>
-
-<p>
-In the Java language, a characteristic of a class definition 
-that is not shared by its objects
-is called <b>static</b>.
-There is only   one class definition for a given class,
-so when a program is running,  
-if something is <code>static</code> then there is only one of it.
-</p>
-
-<p>
-You can think of the word <code>static</code> as meaning "no matter how many
-objects are made, there will be only one of these."
-</p>
-
+        <ul>
+        
+     <li>  We define a Person class with two attributes: name and age. These attributes represent the state of a person object.</li>
+<li> The class has a constructor Person(String name, int age) to initialize the attributes of a Person object when it is created.</li>
+<li> The Person class has a method greet() that prints a greeting message including the person's name and age.</li>
+<li> In the Main class, we create two Person objects (person1 and person2) using the constructor. We provide specific values for the attributes of each person.</li>
+<li> We demonstrate accessing the attributes and calling the greet() method of each Person object (person1 and person2) in the main method.</li>
+</ul>
+<p>This example illustrates the key concepts of OOP, including classes, objects, attributes, methods, and constructors, using Java programming language with a simpler example of a Person class.
+        
 
 
         <div class="clearfloats">  <!-- divs need something inside of them --> </div>
