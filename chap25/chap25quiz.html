@@ -326,35 +326,77 @@ inheritance
 <p>
 7.
 
-What are the <em>static</em> variables and methods of a class? 
+Which of the following best defines attributes in Object-Oriented Programming? 
 
 </p>
 <table>
 <tr><td><input type="radio" name="questradio" value="" onClick="question7.response.value='A'">
 <b>A.&nbsp;&nbsp;&nbsp;</b>
  
-Variables and methods that form the foundation of each object of that class. 
+Methods that define the behavior of objects.
 
 </tr></td>
 
 <tr><td><input type="radio" name="questradio" value="" onClick="question7.response.value='B'">
 <b>B.&nbsp;&nbsp;&nbsp;</b>
  
-Variables and methods that belong to all objects in the computer system.
+Blueprints for creating objects.
 
 </tr></td>
 
 <tr><td><input type="radio" name="questradio" value="" onClick="question7.response.value='C'">
 <b>C.&nbsp;&nbsp;&nbsp;</b>
  
-Variables and methods that belong only the objects of that class.
+Variables that store data within a class.
 
 </tr></td>
 
 <tr><td><input type="radio" name="questradio" value="" onClick="question7.response.value='D'">
 <b>D.&nbsp;&nbsp;&nbsp;</b>
  
-Variables and methods that are part of the class definition, but not of its objects.
+Special methods used for initializing objects.
+</tr></td>
+
+</table>
+<input type="hidden" name="answer" value="C">
+<input type="text" name="correct" value="  " size="5">
+<input type="hidden" name="response" value="" >
+</form>
+
+<hr/>
+<form name="question8">
+<p>
+8.
+
+In Object-Oriented Programming (OOP), what are used to define the behavior of an object? 
+
+</p>
+<table>
+<tr><td><input type="radio" name="questradio" value="" onClick="question8.response.value='A'">
+<b>A.&nbsp;&nbsp;&nbsp;</b>
+ 
+attributes
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question8.response.value='B'">
+<b>B.&nbsp;&nbsp;&nbsp;</b>
+ 
+classes
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question8.response.value='C'">
+<b>C.&nbsp;&nbsp;&nbsp;</b>
+ 
+constructors
+
+</tr></td>
+
+<tr><td><input type="radio" name="questradio" value="" onClick="question8.response.value='D'">
+<b>D.&nbsp;&nbsp;&nbsp;</b>
+ 
+methods
 
 </tr></td>
 
@@ -365,83 +407,71 @@ Variables and methods that are part of the class definition, but not of its obje
 </form>
 
 <hr/>
-<form name="question8">
-<p>
-8.
-
-Which of the following invokes the method <em>length()</em> of the
-object <em>str</em> and stores the result in <em>val</em>? 
-
-</p>
-<table>
-<tr><td><input type="radio" name="questradio" value="" onClick="question8.response.value='A'">
-<b>A.&nbsp;&nbsp;&nbsp;</b>
- 
-val = str.length() ;
-
-</tr></td>
-
-<tr><td><input type="radio" name="questradio" value="" onClick="question8.response.value='B'">
-<b>B.&nbsp;&nbsp;&nbsp;</b>
- 
-val = length.str() ;
-
-</tr></td>
-
-<tr><td><input type="radio" name="questradio" value="" onClick="question8.response.value='C'">
-<b>C.&nbsp;&nbsp;&nbsp;</b>
- 
-val = length().str ;
-
-</tr></td>
-
-<tr><td><input type="radio" name="questradio" value="" onClick="question8.response.value='D'">
-<b>D.&nbsp;&nbsp;&nbsp;</b>
- 
-val = length( str ) ;
-
-</tr></td>
-
-</table>
-<input type="hidden" name="answer" value="A">
-<input type="text" name="correct" value="  " size="5">
-<input type="hidden" name="response" value="" >
-</form>
-
-<hr/>
 <form name="question9">
 <p>
 9.
 
-How many objects of a given class may be constructed in an application? 
+Which of the following code snippets correctly creates a new object of class Person using the given constructor?
+<code>
+  class Person {
+    String name;
+    int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+</code>  
 
 </p>
 <table>
 <tr><td><input type="radio" name="questradio" value="" onClick="question9.response.value='A'">
 <b>A.&nbsp;&nbsp;&nbsp;</b>
  
-Only one per constructor. 
+<code>
+Person person1 = ("Alice", 30);
+Person person2 = ("Bob", 25);
+
+</code>
 
 </tr></td>
 
 <tr><td><input type="radio" name="questradio" value="" onClick="question9.response.value='B'">
 <b>B.&nbsp;&nbsp;&nbsp;</b>
  
-As many as the application asks for.
+<code>
+Person person1 = new Person("Alice", 30);
+Person person2 = new Person("Bob", 25);
+
+</code>
 
 </tr></td>
 
 <tr><td><input type="radio" name="questradio" value="" onClick="question9.response.value='C'">
 <b>C.&nbsp;&nbsp;&nbsp;</b>
  
-Only one per class. 
+<code>
+Person person1 = new Person();
+person1.name = "Alice";
+person1.age = 30;
+
+Person person2 = new Person();
+person2.name = "Bob";
+person2.age = 25;
+
+</code>
 
 </tr></td>
 
 <tr><td><input type="radio" name="questradio" value="" onClick="question9.response.value='D'">
 <b>D.&nbsp;&nbsp;&nbsp;</b>
  
-One object per variable. 
+<code>
+Person person1 = this.Person("Alice", 30);
+Person person2 = this.Person("Bob", 25);
+
+</code> 
 
 </tr></td>
 
@@ -456,40 +486,66 @@ One object per variable.
 <p>
 10.
 
-Which of the following is correct?
+Which of the following code snippets correctly calls the greet() method of the Person class?
+<code>
+  class Person {
+    String name;
+    int age;
 
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public void greet() {
+        System.out.println("Hello, my name is " + name + " and I am " + age + " years old.");
+    }
+}
+
+</code>
 </p>
 <table>
 <tr><td><input type="radio" name="questradio" value="" onClick="question10.response.value='A'">
 <b>A.&nbsp;&nbsp;&nbsp;</b>
  
-String alpha("Hello Quiz!") ;  
+<code>
+person1.greet();
+
+
+</code> 
 
 </tr></td>
 
 <tr><td><input type="radio" name="questradio" value="" onClick="question10.response.value='B'">
 <b>B.&nbsp;&nbsp;&nbsp;</b>
  
-String = "Hello Quiz!" ;  
+<code>
+person1.greet;
+
+</code> 
 
 </tr></td>
 
 <tr><td><input type="radio" name="questradio" value="" onClick="question10.response.value='C'">
 <b>C.&nbsp;&nbsp;&nbsp;</b>
  
-String alpha = new "Hello Quiz!" ;
+<code>
+greet.person1();
+</code>
 
 </tr></td>
 
 <tr><td><input type="radio" name="questradio" value="" onClick="question10.response.value='D'">
 <b>D.&nbsp;&nbsp;&nbsp;</b>
  
-String alpha = "Hello Quiz!" ;
+<code>
+greet().person1();
+</code>
 
 </tr></td>
 
 </table>
-<input type="hidden" name="answer" value="D">
+<input type="hidden" name="answer" value="A">
 <input type="text" name="correct" value="  " size="5">
 <input type="hidden" name="response" value="" >
 </form>
