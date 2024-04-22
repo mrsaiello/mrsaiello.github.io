@@ -29,42 +29,54 @@ exists.
 
 <!-- LESSON DIVISION -->
 <div class="lesson">
-<h1>Objects and Names for Objects</h1>
-<p>
-A variable that <u>can</u> refer to an object does not always <u>have</u> an object to refer to.
-For example, in our program
-the variable <code>str1</code> refers to an object only
-after the <span class="red"><code>new</code></span> operator has created one.
-</p>
+<h1>Using a Class to Make Many Objects</h1>
+<A NAME="cookie cutters"></A>
+<A NAME="Cookie Monster"></A>
 
-<pre class="program">
-
-class StringTester
-{
-
-  public static void main ( String[] args )
-  {
-    String str1;   // str1 is a variable that may refer to an object. 
-                   // The object does not exist unit the "new" is executed.
-    int    len;    // len is a primitive variable of type int
-
-    str1 = <span style="color:blue;font-weight:bold;">new</span> String("Random Jottings");  // create an object of type String
-                                                           
-    len  = str1.length();  // invoke the object's method length()
-
-    System.out.println("The string is " + len + " characters long");
-  }
-}
-</pre>
- 
+<img src="cookieDough.gif" class="rightimage" alt="cookie dough and cookie cutters" />
 
 <p>
-Before the <code>new</code> operator did its work,
-<code>str1</code> was a "place holder" that did not yet refer to any object.
-After the <code>new</code> operator created the object,
-<code>str1</code> can be used to refer to the object.
+&nbsp;
 </p>
 
+<p>
+&nbsp;
+</p>
+
+<p>
+A class is like a cookie cutter that can be used  many times 
+to make many cookies.
+There is only one cookie cutter, but can be used to make many
+cookies.
+Cookies are objects and each
+one has its own individuality 
+because each one is made out of a
+different section of dough.
+Different cookies may have different characteristics,
+even though they follow the same basic pattern.
+For example, cookies may have candy
+sprinkles or frosting, or may be baked for different lengths of time.
+</p>
+
+<A NAME="Cookie Monster"></A>
+<p>
+Cookies can be created.
+And cookies can be destroyed (just ask Cookie Monster).
+But destroying cookies does not affect the
+cookie cutter.
+It can be used again if there is dough left.
+</p>
+
+<p>
+A big cookie jar might require many cookies made with many different
+cookie patterns (stars, hearts, squares).
+A big cookie 
+(such as a gingerbread house) 
+might be built out of
+many smaller cookies of several different types.
+</p>
+
+<br clear="all">
 
         <div class="clearfloats">  <!-- divs need something inside of them --> </div>
 </div> <!-- end lesson -->
@@ -73,12 +85,11 @@ After the <code>new</code> operator created the object,
 <div class="question">
 <h3> QUESTION 8:</h3>
 <p>
-What object is referred to in the statement:
+(Thought question:) Cookies in the real world are objects, of course.
+But real world cookie cutters are objects too.
+Do you think that a Java class has an object-like nature,
+just as does a cookie cutter?
 </p>
-
-<pre>                                                          
-len  = str1.length();  // invoke the object's method length()
-</pre>
 
 
      <div class="navigation">
