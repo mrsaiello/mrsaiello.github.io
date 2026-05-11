@@ -72,18 +72,17 @@ onClick="button1.value=' equals '"> ( "Hello" ) )
     <!-- ------------------------start of  question ------------------------------ -->
 <form>
 <p>
-<b>4.</b> &nbsp; Complete the following fragment so that the loop runs until <code>count</code> reaches 5,
-using the NOT operator (<code>!</code>) in the condition.
+<b>3.</b> &nbsp; Complete the following fragment so that the loop continues until the user types "stop".
 <pre>
-int count = 0;
+String input = "";
 
 while ( <input type="button" 
 value="_________"                    
 name="button1" 
-onClick="button1.value=' ! '"> (count == 5) )
+onClick="button1.value=' ! '"> input.equals("stop") )
 {
-    System.out.println("Count is " + count);
-    count++;
+    System.out.println("You typed: " + input);
+    input = scanner.nextLine();
 }
 </pre>
 </p>
