@@ -72,20 +72,26 @@ onClick="button1.value=' equals '"> ( "Hello" ) )
     <!-- ------------------------start of  question ------------------------------ -->
 <form>
 <p>
-<b>4.</b> &nbsp; Complete the following fragment so that the loop continues
+<b>3.</b> &nbsp; Complete the following fragment so that the loop continues
 while <code>done</code> is false.
 <pre>
+boolean done = false;
+int count = 0;
+
 while ( <input type="button" 
 value="_________"                    
 name="button1" 
 onClick="button1.value=' ! '"> done )
 {
-    System.out.println("Running");
+    System.out.println("Running " + count);
+    count++;
+
+    if (count == 5)
+        done = true;
 }
 </pre>
 </p>
 </form>
-<br>
 <!-- ------------------------end of  question --------------------------------- -->  
 
 <hr>
